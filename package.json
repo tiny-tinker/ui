@@ -1,0 +1,28 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "Shared components for Asyncy",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "@storybook/vue": "^3.4.6",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asyncy/ui.git"
+  },
+  "author": "Andrea Law",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asyncy/ui/issues"
+  },
+  "homepage": "https://github.com/asyncy/ui#readme"
+}
