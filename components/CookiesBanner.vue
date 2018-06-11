@@ -1,34 +1,76 @@
 <template>
-  <transition name="open">
-    <div v-if="show" class="cookies-banner">
-      <div class="side1">
-        We use cookies to track your usage of this site. We also share information about your usage with the services we use for form creation, who may combine it with other information that you've provided them or that they've collected from your use of their services. We won't ever track you without your permission.
-      </div>
-      <div class="side2">
+  <div>
+    <transition name="fade">
+      <div v-if="show" class="cookies-banner">
+        <div class="side1">
+          We use cookies to track your usage of this site. We also share information about your usage with the services we use for form creation, who may combine it with other information that you've provided them or that they've collected from your use of their services. We will never track you without your permission.
+        </div>
+        <div class="side2">
           <button class="cookie-button" @click="allowAllCookies">Allow all cookies</button>
+        </div>
       </div>
-    </div>
-  </transition>
+    </transition>
+    <transition name="fade">
+      <div class="cookies-banner" v-if="showThanks">
+        Thanks! 🎉 You can always revoke your consent at the bottom of the page.
+      </div>
+    </transition>
+    <transition name="fade">
+      <div class="cookies-banner" v-if="showRevoked">
+        Your consent has been revoked. We won't track you any longer.
+      </div>
+    </transition>
+  </div>
 </template>
 
 <script>
+import EventBus from '../helpers/EventBus';
+
 export default {
-  props: {
-    onConsentReceived: Function,
-  },
   data() {
     return {
       show: false,
+      showThanks: false,
+      showRevoked: false,
     }
   },
   mounted() {
-    this.show = true;
+    const consent = document.cookie.split(';').find((item) => {
+      return item.includes('cookie-consent-received=true');
+    });
+
+    if (!consent) {
+      this.show = true;
+    } else {
+      this.$emit('cookie-consent-received');
+      EventBus.$emit('cookie-consent-received');
+    }
+
+    EventBus.$on('cookie-consent-revoked', () => {
+      this.clearAllCookies();
+      this.showRevoked = true;
+      setTimeout(() => {
+        this.showRevoked = false;
+        this.show = true;
+      }, 3000);
+    });
   },
   methods: {
     allowAllCookies() {
       this.show = false;
-      this.onConsentReceived();
+      this.showThanks = true;
+      setTimeout(() => {
+        this.showThanks = false;
+      }, 3000);
+      const expiry = new Date();
+      expiry.setFullYear(expiry.getFullYear() + 1);
+      document.cookie = `cookie-consent-received=true;expires=${expiry.toGMTString()}`
+      this.$emit('cookie-consent-received');
+      EventBus.$emit('cookie-consent-received');
     },
+    clearAllCookies() {
+      document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+    }
   }
 }
 </script>
@@ -44,6 +86,8 @@ export default {
   position: fixed;
   z-index: 200;
   bottom: 0;
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 .side1 {
@@ -68,17 +112,19 @@ export default {
   padding: 15px 20px;
   border-radius: 3px;
   transition: all 0.2s;
+  pointer-events: auto;
+  opacity: 1;
 }
 
 .cookie-button:hover {
   filter: brightness(125%);
 }
 
-.open-enter-active, .open-leave-active {
+.fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
 
-.open-enter, .open-leave-to {
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
 </style>
