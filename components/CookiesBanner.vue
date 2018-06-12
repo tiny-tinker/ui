@@ -20,11 +20,13 @@
         Your consent has been revoked. We won't track you any longer.
       </div>
     </transition>
+    <div v-if="!show" class="revoke-banner">
+      Thanks for letting us use cookies! <a href="javascript:void(0)" @click="revokeConsent">Revoke your consent.</a>
+    </div>
   </div>
 </template>
 
 <script>
-import EventBus from '../helpers/EventBus';
 
 export default {
   data() {
@@ -43,17 +45,7 @@ export default {
       this.show = true;
     } else {
       this.$emit('cookie-consent-received');
-      EventBus.$emit('cookie-consent-received');
     }
-
-    EventBus.$on('cookie-consent-revoked', () => {
-      this.clearAllCookies();
-      this.showRevoked = true;
-      setTimeout(() => {
-        this.showRevoked = false;
-        this.show = true;
-      }, 3000);
-    });
   },
   methods: {
     allowAllCookies() {
@@ -66,11 +58,20 @@ export default {
       expiry.setFullYear(expiry.getFullYear() + 1);
       document.cookie = `cookie-consent-received=true;expires=${expiry.toGMTString()}`
       this.$emit('cookie-consent-received');
-      EventBus.$emit('cookie-consent-received');
+    },
+    revokeConsent() {
+      this.$emit('cookie-consent-revoked');
+      this.showRevoked = true;
+      this.clearAllCookies();
+
+      setTimeout(() => {
+        this.showRevoked = false;
+        this.show = true;
+      }, 3000);
     },
     clearAllCookies() {
       document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
-    }
+    },
   }
 }
 </script>
@@ -126,5 +127,15 @@ export default {
 
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+
+.revoke-banner {
+  text-align: center;
+  font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  background-color: #111;
+  font-size: 0.8em;
+  color: #666;
+  width:100%;
+  padding: 25px;
 }
 </style>
