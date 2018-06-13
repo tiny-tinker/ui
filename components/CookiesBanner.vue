@@ -1,7 +1,7 @@
 <template>
   <div v-if="active">
     <transition name="fade">
-      <div v-if="show" class="cookies-banner">
+      <div v-if="show && !showRevoked" class="cookies-banner">
         <div class="side1">
           We use cookies to track your usage of this site. We also share information about your usage with third-party services to help improve your experience. We will never track you without your permission.
         </div>
@@ -44,6 +44,10 @@ export default {
       return item.includes('cookie-consent-received=true');
     });
 
+    if (window.location.search === "?revoked=true") {
+      this.onRevoke();
+    }
+
     this.active = this.forceActive || inEU();
 
     if (!consent) {
@@ -65,14 +69,21 @@ export default {
       this.$emit('cookie-consent-received');
     },
     revokeConsent() {
-      this.$emit('cookie-consent-revoked');
+      window.location.search = "?revoked=true";
+    },
+    onRevoke() {
+      window.scrollTo(0, document.body.scrollHeight);
+
+      this.show = true;
       this.showRevoked = true;
-      this.clearAllCookies();
 
       setTimeout(() => {
         this.showRevoked = false;
-        this.show = true;
       }, 3000);
+
+      this.$emit('cookie-consent-revoked');
+
+      this.clearAllCookies();
     },
     clearAllCookies() {
       document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
