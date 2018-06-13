@@ -1600,7 +1600,7 @@ var script = {
 
 const __vue_script__ = script;
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.active)?_c('div',[_c('transition',{attrs:{"name":"fade"}},[(_vm.show)?_c('div',{staticClass:"cookies-banner"},[_c('div',{staticClass:"side1"},[_vm._v("\n        We use cookies to track your usage of this site. We also share information about your usage with the services we use for form creation, who may combine it with other information that you've provided them or that they've collected from your use of their services. We will never track you without your permission.\n      ")]),_vm._v(" "),_c('div',{staticClass:"side2"},[_c('button',{staticClass:"cookie-button",on:{"click":_vm.allowAllCookies}},[_vm._v("Allow all cookies")])])]):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.showThanks)?_c('div',{staticClass:"cookies-banner"},[_vm._v("\n      Thanks! 🎉 You can always revoke your consent at the bottom of the page.\n    ")]):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.showRevoked)?_c('div',{staticClass:"cookies-banner"},[_vm._v("\n      Your consent has been revoked. We won't track you any longer.\n    ")]):_vm._e()]),_vm._v(" "),(!_vm.show)?_c('div',{staticClass:"revoke-banner"},[_vm._v("\n    Thanks for letting us use cookies! "),_c('a',{attrs:{"href":"javascript:void(0)"},on:{"click":_vm.revokeConsent}},[_vm._v("Revoke your consent.")])]):_vm._e()],1):_vm._e()};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.active)?_c('div',[_c('transition',{attrs:{"name":"fade"}},[(_vm.show)?_c('div',{staticClass:"cookies-banner"},[_c('div',{staticClass:"side1"},[_vm._v("\n        We use cookies to track your usage of this site. We also share information about your usage with third-party services to help improve your experience. We will never track you without your permission.\n      ")]),_vm._v(" "),_c('div',{staticClass:"side2"},[_c('button',{staticClass:"cookie-button",on:{"click":_vm.allowAllCookies}},[_vm._v("Allow all cookies")])])]):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.showThanks)?_c('div',{staticClass:"cookies-banner"},[_vm._v("\n      Thanks! 🎉 You can always revoke your consent at the bottom of the page.\n    ")]):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.showRevoked)?_c('div',{staticClass:"cookies-banner"},[_vm._v("\n      Your consent has been revoked. We won't track you any longer.\n    ")]):_vm._e()]),_vm._v(" "),(!_vm.show)?_c('div',{staticClass:"revoke-banner"},[_vm._v("\n    Thanks for letting us use cookies! "),_c('a',{attrs:{"href":"javascript:void(0)"},on:{"click":_vm.revokeConsent}},[_vm._v("Revoke your consent.")])]):_vm._e()],1):_vm._e()};
 var __vue_staticRenderFns__ = [];
 
 const __vue_template__ = typeof __vue_render__ !== 'undefined'
@@ -1609,7 +1609,7 @@ const __vue_template__ = typeof __vue_render__ !== 'undefined'
 /* style */
 const __vue_inject_styles__ = undefined;
 /* scoped */
-const __vue_scope_id__ = "data-v-31fa8d28";
+const __vue_scope_id__ = "data-v-8d73ff9a";
 /* module identifier */
 const __vue_module_identifier__ = undefined;
 /* functional template */
