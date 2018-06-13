@@ -2,6 +2,7 @@ import vue from 'rollup-plugin-vue';
 import svg from 'rollup-plugin-svg';
 import scss from 'rollup-plugin-scss';
 import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 
 const fromComponents = (componentNames) => {
   return componentNames.map((name) => ({
@@ -19,9 +20,10 @@ const fromComponents = (componentNames) => {
           moduleDirectory: 'node_modules',
         },
       }),
+      commonjs(),
     ],
     external: [ 'vue', 'vue-bus' ],
   }));
 };
 
-export default fromComponents(['CookiesBanner', 'AppFooter', 'RevokeCookieConsent']);
+export default fromComponents(['CookiesBanner', 'AppFooter']);
