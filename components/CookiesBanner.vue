@@ -33,7 +33,7 @@ export default {
   props: ['forceActive'],
   data() {
     return {
-      active: this.forceActive || inEU(),
+      active: this.forceActive,
       show: false,
       showThanks: false,
       showRevoked: false,
@@ -43,6 +43,8 @@ export default {
     const consent = document.cookie.split(';').find((item) => {
       return item.includes('cookie-consent-received=true');
     });
+
+    this.active = this.forceActive || inEU();
 
     if (!consent) {
       this.show = true;

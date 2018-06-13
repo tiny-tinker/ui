@@ -1551,7 +1551,7 @@ var script = {
   props: ['forceActive'],
   data() {
     return {
-      active: this.forceActive || inEu(),
+      active: this.forceActive,
       show: false,
       showThanks: false,
       showRevoked: false,
@@ -1561,6 +1561,8 @@ var script = {
     const consent = document.cookie.split(';').find((item) => {
       return item.includes('cookie-consent-received=true');
     });
+
+    this.active = this.forceActive || inEu();
 
     if (!consent) {
       this.show = true;
@@ -1607,7 +1609,7 @@ const __vue_template__ = typeof __vue_render__ !== 'undefined'
 /* style */
 const __vue_inject_styles__ = undefined;
 /* scoped */
-const __vue_scope_id__ = "data-v-3db923e6";
+const __vue_scope_id__ = "data-v-31fa8d28";
 /* module identifier */
 const __vue_module_identifier__ = undefined;
 /* functional template */
