@@ -3,7 +3,7 @@
     <transition name="fade">
       <div v-if="show" class="cookies-banner">
         <div class="side1">
-          We use cookies to track your usage of this site. We also share information about your usage with the services we use for form creation, who may combine it with other information that you've provided them or that they've collected from your use of their services. We will never track you without your permission.
+          We use cookies to track your usage of this site. We also share information about your usage with third-party services to help improve your experience. We will never track you without your permission.
         </div>
         <div class="side2">
           <button class="cookie-button" @click="allowAllCookies">Allow all cookies</button>
