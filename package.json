@@ -1,9 +1,10 @@
 {
   "name": "asyncy-ui-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Shared components for Asyncy",
   "main": "index.js",
   "dependencies": {
+    "@segment/in-eu": "^0.2.0",
     "babel-core": "^6.26.3",
     "bulma": "^0.7.1",
     "eslint-plugin-vue": "^4.5.0",

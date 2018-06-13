@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="active">
     <transition name="fade">
       <div v-if="show" class="cookies-banner">
         <div class="side1">
@@ -27,10 +27,13 @@
 </template>
 
 <script>
+import inEU from '@segment/in-eu';
 
 export default {
+  props: ['forceActive'],
   data() {
     return {
+      active: this.forceActive || inEU(),
       show: false,
       showThanks: false,
       showRevoked: false,

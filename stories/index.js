@@ -8,7 +8,7 @@ import AppFooter from '../components/AppFooter.vue';
 storiesOf('Cookies', module)
   .add('give and revoke consent for cookies', () => ({
     components: { CookiesBanner },
-    template: '<div><cookies-banner/></div>'
+    template: '<div><cookies-banner :force-active="true"/></div>'
   }));
 
 storiesOf('App Footer', module)
