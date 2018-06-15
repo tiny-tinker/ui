@@ -4,54 +4,54 @@
       <nav class='column'>
         <div class="menu-header">Product</div>
         <ul class="ul">
-          <li class="li"><component :is="linkComponent" to='/platform'>Platform</component></li>
-          <li class="li"><component :is="linkComponent" to='https://docs.asyncy.com'>Documentation</component></li>
-          <li class="li"><component :is="linkComponent" to='https://docs.asyncy.com/faq'>FAQ</component></li>
+          <li class="li"><a href='https://asyncy.com/platform'>Platform</a></li>
+          <li class="li"><a href='https://docs.asyncy.com'>Documentation</a></li>
+          <li class="li"><a href='https://docs.asyncy.com/faq'>FAQ</a></li>
           <li class="li">
-            <a class="typeform-share" href="https://asyncy.click/feedback" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">Give Feedback</a>
+            <a href="https://asyncy.click/feedback" target="_blank">Give Feedback</a>
           </li>
         </ul>
       </nav>
       <nav class='column'>
         <div class="menu-header">Resources</div>
         <ul class="ul">
-          <li class="li"><component :is="linkComponent" to='/events'>Events</component></li>
-          <li class="li"><component :is="linkComponent" to='https://medium.com/asyncy'>Blog</component></li>
+          <li class="li"><a href='https://asyncy.com/events'>Events</a></li>
+          <li class="li"><a href='https://medium.com/asyncy'>Blog</a></li>
         </ul>
       </nav>
       <nav class='column'>
         <div class="menu-header">Company</div>
         <ul class="ul">
-          <li class="li"><component :is="linkComponent" to='/about'>About</component></li>
-          <li class="li"><component :is="linkComponent" to='https://angel.co/asyncy/jobs'>Jobs</component></li>
-          <li class="li"><component :is="linkComponent" to='/contact'>Contact</component></li>
+          <li class="li"><a href='https://asyncy.com//about'>About</a></li>
+          <li class="li"><a href='https://angel.co/asyncy/jobs'>Jobs</a></li>
+          <li class="li"><a href='https://asyncy.com/contact'>Contact</a></li>
         </ul>
       </nav>
       <div class='column'>
         <div>
-          <component :is="linkComponent" to='http://asyncy.click/slack'>
+          <a href='http://asyncy.click/slack' target="_blank">
             <img :src="slackLogo" :style="{
               display: 'inline-block',
               width: '30px',
               opacity: 0.8,
             }" alt="Slack"/>
-          </component>
-          <component :is="linkComponent" to='https://github.com/asyncy'>
+          </a>
+          <a href='https://github.com/asyncy' target="_blank">
             <img :src="githubLogo" :style="{
               display: 'inline-block',
               width: '30px',
               marginLeft: '25px',
               opacity: 0.8,
             }" alt="Github"/>
-          </component>
-          <component :is="linkComponent" to='https://twitter.com/asyncy'>
+          </a>
+          <a href='https://twitter.com/asyncy' target="_blank">
             <img :src="twitterLogo" :style="{
               display: 'inline-block',
               width: '30px',
               marginLeft: '25px',
               opacity: 0.8,
             }" alt="Twitter"/>
-          </component>
+          </a>
         </div>
         <div class="copyright">
           © 2018 Asyncy, Inc.
@@ -67,7 +67,6 @@ import githubLogo from '../assets/images/github_logo.svg';
 import twitterLogo from '../assets/images/twitter_logo.svg';
 
 export default {
-  props: ['linkComponent'],
   data() {
     return {
       slackLogo,
@@ -96,6 +95,7 @@ export default {
 .ul {
   list-style: none;
   padding-left: 0;
+  text-align: left;
 }
 
 .li {
@@ -124,6 +124,7 @@ export default {
   font-size: 1em;
   color: white;
   margin-bottom: 1em;
+  text-align: left;
 }
 
 .copyright {
