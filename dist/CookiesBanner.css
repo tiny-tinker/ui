@@ -1,4 +1,4 @@
-.cookies-banner[data-v-2fcf44c6] {
+.cookies-banner[data-v-129c153c] {
   font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   background-color: #111;
   color: #fff;
@@ -11,19 +11,19 @@
   opacity: .9;
   pointer-events: none; }
 
-.side1[data-v-2fcf44c6] {
+.side1[data-v-129c153c] {
   line-height: 1.8em;
   display: inline-block;
   width: 70%;
   flex-grow: 1; }
 
-.side2[data-v-2fcf44c6] {
+.side2[data-v-129c153c] {
   flex-grow: 1;
   display: inline-flex;
   justify-content: center;
   align-items: center; }
 
-.cookie-button[data-v-2fcf44c6] {
+.cookie-button[data-v-129c153c] {
   color: #fff;
   background-color: #515cf9;
   font-size: 1.1em;
@@ -34,16 +34,16 @@
   pointer-events: auto;
   opacity: 1; }
 
-.cookie-button[data-v-2fcf44c6]:hover {
+.cookie-button[data-v-129c153c]:hover {
   filter: brightness(125%); }
 
-.fade-enter-active[data-v-2fcf44c6], .fade-leave-active[data-v-2fcf44c6] {
+.fade-enter-active[data-v-129c153c], .fade-leave-active[data-v-129c153c] {
   transition: opacity .5s; }
 
-.fade-enter[data-v-2fcf44c6], .fade-leave-to[data-v-2fcf44c6] {
+.fade-enter[data-v-129c153c], .fade-leave-to[data-v-129c153c] {
   opacity: 0; }
 
-.revoke-banner[data-v-2fcf44c6] {
+.revoke-banner[data-v-129c153c] {
   text-align: center;
   font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   background-color: #111;

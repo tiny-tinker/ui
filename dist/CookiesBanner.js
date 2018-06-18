@@ -1587,6 +1587,7 @@ var script = {
       this.$emit('cookie-consent-received');
     },
     revokeConsent() {
+      this.clearAllCookies();
       window.location.search = "?revoked=true";
     },
     onRevoke() {
@@ -1600,8 +1601,6 @@ var script = {
       }, 3000);
 
       this.$emit('cookie-consent-revoked');
-
-      this.clearAllCookies();
     },
     clearAllCookies() {
       document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
@@ -1620,7 +1619,7 @@ const __vue_template__ = typeof __vue_render__ !== 'undefined'
 /* style */
 const __vue_inject_styles__ = undefined;
 /* scoped */
-const __vue_scope_id__ = "data-v-2fcf44c6";
+const __vue_scope_id__ = "data-v-129c153c";
 /* module identifier */
 const __vue_module_identifier__ = undefined;
 /* functional template */

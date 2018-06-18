@@ -69,6 +69,7 @@ export default {
       this.$emit('cookie-consent-received');
     },
     revokeConsent() {
+      this.clearAllCookies();
       window.location.search = "?revoked=true";
     },
     onRevoke() {
@@ -82,8 +83,6 @@ export default {
       }, 3000);
 
       this.$emit('cookie-consent-revoked');
-
-      this.clearAllCookies();
     },
     clearAllCookies() {
       document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
