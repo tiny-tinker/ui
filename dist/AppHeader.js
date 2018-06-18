@@ -28,28 +28,22 @@ var script = {
       return this.placeholderText || 'Search';
     },
     mobileHeaderLinks() {
-      const mobileHeaderLinks = headerLinks.slice();
-      mobileHeaderLinks.unshift({ text: 'Home', to: '/'});
+      const mobileHeaderLinks = this.headerLinks.slice();
+      mobileHeaderLinks.unshift({ text: 'Home', to: '/' });
       return mobileHeaderLinks;
-    }
+    },
   },
 };
 
 const __vue_script__ = script;
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app-header"},[_c('div',{staticClass:"columns app-header-columns"},[_c('div',{staticClass:"column is-narrow"},[_c('div',{staticClass:"columns is-mobile"},[_c('div',{staticClass:"column logo-container"},[_c(_vm.linkComponent,{tag:"component",attrs:{"to":"/"}},[_c('img',{style:({
-              margin: 0,
-            }),attrs:{"src":_vm.logo}})])],1),_vm._v(" "),(!_vm.mobileMenuOpen)?_c('div',{staticClass:"column is-hidden-tablet"},[_c('div',{staticClass:"mobile-menu-icon-hamburger"},[_c(_vm.linkComponent,{tag:"component",staticClass:"icon",on:{"click":_vm.openMenu}},[_vm._v("☰")])],1)]):_vm._e()])]),_vm._v(" "),(_vm.showSearch)?_c('div',{staticClass:"column is-narrow",style:({
-      padding: 0,
-    })},[_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.onSubmit($event)}}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.search),expression:"search"}],staticClass:"header-search-bar",attrs:{"placeholder":_vm.placeholder},domProps:{"value":(_vm.search)},on:{"input":function($event){if($event.target.composing){ return; }_vm.search=$event.target.value;}}})])]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"column"}),_vm._v(" "),_c('div',{staticClass:"column is-hidden-mobile is-narrow",style:({
-      display: 'flex',
-      alignItems: 'center',
-      padding: 0,
-    })},[_c('nav',[_c('ul',{staticClass:"links"},_vm._l((_vm.headerLinks),function(link,index){return _c('li',{key:index,staticClass:"web-header-link"},[(!link.items && !link.button)?_c('span',{staticClass:"link"},[_c(_vm.linkComponent,{tag:"component",attrs:{"to":link.to}},[_vm._v(_vm._s(link.text))])],1):_vm._e(),_vm._v(" "),(link.button)?_c('button',{staticClass:"header-button"},[_vm._v(_vm._s(link.text))]):_vm._e(),_vm._v(" "),(link.items)?_c('div',{staticClass:"dropdown is-hoverable is-right"},[_c('div',{staticClass:"dropdown-trigger"},[_c('span',{staticClass:"dropdown-header-text",domProps:{"innerHTML":_vm._s(link.text)}})]),_vm._v(" "),_c('div',{staticClass:"dropdown-menu",attrs:{"role":"menu"}},[_c('div',{staticClass:"dropdown-content"},_vm._l((link.items),function(item,index){return _c(_vm.linkComponent,{key:index,tag:"component",staticClass:"dropdown-item",attrs:{"to":item.to}},[_vm._v("\n                    "+_vm._s(item.text)+"\n                  ")])}))])]):_vm._e()])}))])]),_vm._v(" "),(_vm.mobileMenuOpen)?_c('div',{staticClass:"mobile-menu is-hidden-tablet"},[_c('div',{staticClass:"mobile-menu-icon-close"},[_c(_vm.linkComponent,{tag:"component",staticClass:"icon",on:{"click":_vm.closeMenu}},[_vm._v("✕")])],1),_vm._v(" "),_c('nav',[_c('ul',{staticClass:"columns mobile-links"},_vm._l((_vm.mobileHeaderLinks),function(link,index){return _c('div',{key:index},[(!link.items)?_c('li',{staticClass:"column",style:({
-              padding: '22px',
-            })},[_c('span',{staticClass:"link",on:{"click":_vm.closeMenu}},[_c(_vm.linkComponent,{tag:"component",attrs:{"to":link.to}},[_vm._v(_vm._s(link.text))])],1)]):_vm._l((link.items),function(item,index){return _c('li',{key:index,staticClass:"column",style:({
-              padding: '22px',
-            })},[_c('span',{staticClass:"link",on:{"click":_vm.closeMenu}},[_c(_vm.linkComponent,{tag:"component",attrs:{"to":item.to}},[_vm._v(_vm._s(item.text))])],1)])})],2)}))])]):_vm._e()])])};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app-header"},[_c('div',{staticClass:"columns app-header-columns is-mobile"},[_c('div',{staticClass:"column logo-container align-center"},[_c(_vm.linkComponent,{tag:"component",attrs:{"to":"/"}},[_c('img',{style:({
+          margin: '12px 0',
+        }),attrs:{"src":_vm.logo}})])],1),_vm._v(" "),_c('div',{staticClass:"column is-hidden-touch"}),_vm._v(" "),(_vm.showSearch)?_c('div',{staticClass:"column align-center is-hidden-mobile search-container is-2"},[_c('form',{staticClass:"header-form",on:{"submit":function($event){$event.preventDefault();return _vm.onSubmit($event)}}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.search),expression:"search"}],staticClass:"header-search-bar",attrs:{"placeholder":_vm.placeholder},domProps:{"value":(_vm.search)},on:{"input":function($event){if($event.target.composing){ return; }_vm.search=$event.target.value;}}})])]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"column is-hidden-touch"}),_vm._v(" "),_c('div',{staticClass:"column is-hidden-touch is-narrow align-center"},[_c('nav',[_c('ul',{staticClass:"links"},_vm._l((_vm.headerLinks),function(link,index){return _c('li',{key:index,staticClass:"web-header-link"},[(!link.items && !link.button)?_c('span',{staticClass:"link"},[_c(_vm.linkComponent,{tag:"component",attrs:{"to":link.to}},[_vm._v(_vm._s(link.text))])],1):_vm._e(),_vm._v(" "),(link.button)?_c('button',{staticClass:"header-button"},[_vm._v(_vm._s(link.text))]):_vm._e(),_vm._v(" "),(link.items)?_c('div',{staticClass:"dropdown is-hoverable is-right"},[_c('div',{staticClass:"dropdown-trigger"},[_c('span',{staticClass:"dropdown-header-text",domProps:{"innerHTML":_vm._s(link.text)}})]),_vm._v(" "),_c('div',{staticClass:"dropdown-menu",attrs:{"role":"menu"}},[_c('div',{staticClass:"dropdown-content"},_vm._l((link.items),function(item,index){return _c(_vm.linkComponent,{key:index,tag:"component",staticClass:"dropdown-item",attrs:{"to":item.to}},[_vm._v("\n                    "+_vm._s(item.text)+"\n                  ")])}))])]):_vm._e()])}))])]),_vm._v(" "),_c('div',{staticClass:"column is-hidden-desktop is-narrow align-center hamburger-container"},[_c('div',{staticClass:"mobile-menu-icon-hamburger"},[_c('a',{staticClass:"icon",on:{"click":_vm.openMenu}},[_vm._v("☰")])])])]),_vm._v(" "),(_vm.mobileMenuOpen)?_c('div',{staticClass:"mobile-menu"},[_c('div',{staticClass:"mobile-menu-icon-close"},[_c('a',{staticClass:"icon",on:{"click":_vm.closeMenu}},[_vm._v("✕")])]),_vm._v(" "),_c('nav',[_c('ul',{staticClass:"mobile-links"},_vm._l((_vm.mobileHeaderLinks),function(link,index){return _c('div',{key:index},[(!link.items)?_c('li',{staticClass:"column",style:({
+            padding: '22px',
+          })},[_c('span',{staticClass:"link",on:{"click":_vm.closeMenu}},[_c(_vm.linkComponent,{tag:"component",attrs:{"to":link.to}},[_vm._v(_vm._s(link.text))])],1)]):_vm._l((link.items),function(item,index){return _c('li',{key:index,staticClass:"column",style:({
+            padding: '22px',
+          })},[_c('span',{staticClass:"link",on:{"click":_vm.closeMenu}},[_c(_vm.linkComponent,{tag:"component",attrs:{"to":item.to}},[_vm._v(_vm._s(item.text))])],1)])})],2)}))])]):_vm._e()])};
 var __vue_staticRenderFns__ = [];
 
 const __vue_template__ = typeof __vue_render__ !== 'undefined'
@@ -58,7 +52,7 @@ const __vue_template__ = typeof __vue_render__ !== 'undefined'
 /* style */
 const __vue_inject_styles__ = undefined;
 /* scoped */
-const __vue_scope_id__ = "data-v-127038f3";
+const __vue_scope_id__ = "data-v-4d12ea44";
 /* module identifier */
 const __vue_module_identifier__ = undefined;
 /* functional template */

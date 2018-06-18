@@ -1,38 +1,25 @@
 <template>
   <div class="app-header">
-    <div class="columns app-header-columns">
-      <div class='column is-narrow'>
-        <div class="columns is-mobile">
-          <div class="column logo-container">
-            <component :is="linkComponent" to='/'>
-              <img :style="{
-                margin: 0,
-              }" :src="logo" />
-            </component>
-          </div>
-          <div v-if="!mobileMenuOpen" class='column is-hidden-tablet'>
-            <div class="mobile-menu-icon-hamburger">
-              <component :is="linkComponent" class="icon" @click="openMenu">☰</component>
-            </div>
-          </div>
-        </div>
+    <div class="columns app-header-columns is-mobile">
+      <div class="column logo-container align-center">
+        <component :is="linkComponent" to='/'>
+          <img :style="{
+            margin: '12px 0',
+          }" :src="logo" />
+        </component>
       </div>
 
-      <div v-if="showSearch" class="column is-narrow" :style="{
-        padding: 0,
-      }">
-        <form @submit.prevent="onSubmit">
+      <div class="column is-hidden-touch" />
+
+      <div v-if="showSearch" class="column align-center is-hidden-mobile search-container is-2">
+        <form class="header-form" @submit.prevent="onSubmit">
           <input class="header-search-bar" :placeholder="placeholder" v-model="search" />
         </form>
       </div>
 
-      <div class="column" />
+      <div class="column is-hidden-touch" />
 
-      <div class="column is-hidden-mobile is-narrow" :style="{
-        display: 'flex',
-        alignItems: 'center',
-        padding: 0,
-      }">
+      <div class="column is-hidden-touch is-narrow align-center">
         <nav>
           <ul class="links">
             <li v-for="(link, index) in headerLinks" class="web-header-link" :key="index">
@@ -59,31 +46,36 @@
         </nav>
       </div>
 
-      <div class="mobile-menu is-hidden-tablet" v-if="mobileMenuOpen">
-        <div class="mobile-menu-icon-close">
-          <component :is="linkComponent" class="icon" @click="closeMenu">✕</component>
+      <div class="column is-hidden-desktop is-narrow align-center hamburger-container">
+        <div class="mobile-menu-icon-hamburger">
+          <a class="icon" @click="openMenu">☰</a>
         </div>
-        <nav>
-          <ul class="columns mobile-links">
-            <div v-for="(link, index) in mobileHeaderLinks" :key="index">
-              <li v-if="!link.items" class='column' :style="{
-                padding: '22px',
-              }">
-                <span class="link" @click="closeMenu">
-                  <component :is="linkComponent" :to="link.to">{{link.text}}</component>
-                </span>
-              </li>
-              <li v-else v-for="(item, index) in link.items" :key="index" class='column' :style="{
-                padding: '22px',
-              }">
-                <span class="link" @click="closeMenu">
-                  <component :is="linkComponent" :to="item.to">{{item.text}}</component>
-                </span>
-              </li>
-            </div>
-          </ul>
-        </nav>
       </div>
+    </div>
+    <div class="mobile-menu" v-if="mobileMenuOpen">
+      <div class="mobile-menu-icon-close">
+        <a class="icon" @click="closeMenu">✕</a>
+      </div>
+      <nav>
+        <ul class="mobile-links">
+          <div v-for="(link, index) in mobileHeaderLinks" :key="index">
+            <li v-if="!link.items" class='column' :style="{
+              padding: '22px',
+            }">
+              <span class="link" @click="closeMenu">
+                <component :is="linkComponent" :to="link.to">{{link.text}}</component>
+              </span>
+            </li>
+            <li v-else v-for="(item, index) in link.items" :key="index" class='column' :style="{
+              padding: '22px',
+            }">
+              <span class="link" @click="closeMenu">
+                <component :is="linkComponent" :to="item.to">{{item.text}}</component>
+              </span>
+            </li>
+          </div>
+        </ul>
+      </nav>
     </div>
   </div>
 </template>
@@ -117,10 +109,10 @@ export default {
       return this.placeholderText || 'Search';
     },
     mobileHeaderLinks() {
-      const mobileHeaderLinks = headerLinks.slice();
-      mobileHeaderLinks.unshift({ text: 'Home', to: '/'});
+      const mobileHeaderLinks = this.headerLinks.slice();
+      mobileHeaderLinks.unshift({ text: 'Home', to: '/' });
       return mobileHeaderLinks;
-    }
+    },
   },
 }
 </script>
@@ -136,8 +128,8 @@ export default {
 
   .app-header-columns {
     margin: 0 auto;
-    max-width: 1200;
-    margin: 0 25px;
+    max-width: 1200px;
+    padding: 0 25px;
   }
 }
 
@@ -157,11 +149,16 @@ export default {
   z-index: 3000;
 }
 
-.mobile-menu-icon-hamburger {
-  font-size: 32px;
-  line-height: 20px;
-  text-align: right;
-  vertical-align: top;
+.hamburger-container {
+  justify-content: flex-end;
+  margin-left: 30px;
+
+  .mobile-menu-icon-hamburger {
+    font-size: 32px;
+    line-height: 20px;
+    text-align: right;
+    vertical-align: top;
+  }
 }
 
 .mobile-menu-icon-close {
@@ -185,7 +182,7 @@ export default {
   text-align: right;
   font-size: 1.06em;
   margin: 0;
-  padding: 0;
+  padding: 0 25px 0 0;
 
   .web-header-link {
     display: inline;
@@ -270,21 +267,31 @@ export default {
   text-align: left;
 }
 
+.header-form {
+  width: 100%;
+}
+
 .header-search-bar {
   font-size: 1em;
   border-radius: 6px;
   border: 1px solid transparent;
   padding: 12px 20px;
-  margin-left: 20px;
   background-color: rgba(35,35,35,1);
   color: rgba(190,190,190,1);
   transition: all 0.2s ease-in-out;
   outline: none;
+  width: 100%;
 }
 
 .header-search-bar:focus {
   border-color: #515CF9;
   filter: brightness(120%);
   color: white;
+}
+
+.align-center {
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 </style>
