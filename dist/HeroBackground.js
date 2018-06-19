@@ -43,7 +43,7 @@ const __vue_script__ = script;
 /* template */
 var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"left-image",style:({
     position: 'absolute',
-    zIndex: '-1',
+    zIndex: '0',
     left: '-30px',
     top: '0px',
   })},[_c('img',{style:({
@@ -54,7 +54,7 @@ var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=
       height: ("calc(700px * " + (_vm.scale || 1) + ")"),
     }),attrs:{"src":_vm.leftImage,"alt":"null"}})]),_vm._v(" "),_c('div',{staticClass:"right-image",style:({
     position: 'absolute',
-    zIndex: '-1',
+    zIndex: '0',
     width: '450px',
     height: '700px',
     overflow: 'hidden',
@@ -75,7 +75,7 @@ const __vue_template__ = typeof __vue_render__ !== 'undefined'
 /* style */
 const __vue_inject_styles__ = undefined;
 /* scoped */
-const __vue_scope_id__ = "data-v-d426367a";
+const __vue_scope_id__ = "data-v-648f4a7e";
 /* module identifier */
 const __vue_module_identifier__ = undefined;
 /* functional template */
