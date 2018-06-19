@@ -2,9 +2,13 @@ import Vue from 'vue';
 
 import { storiesOf } from '@storybook/vue';
 
+import headerLeft from '../assets/images/home_header_left.svg';
+import headerRight from '../assets/images/home_header_right.svg';
+
 import CookiesBanner from '../components/CookiesBanner.vue';
 import AppFooter from '../components/AppFooter.vue';
 import AppHeader from '../components/AppHeader.vue';
+import HeroBackground from '../components/HeroBackground.vue';
 
 import './external.scss';
 
@@ -40,4 +44,16 @@ storiesOf('App Header and Footer', module)
   .add('a footer', () => ({
     components: { AppFooter },
     template: '<div><app-footer/></div>'
+  }))
+  .add('Header background', () => ({
+    components: { HeroBackground },
+    template: `<hero-background
+      left-image="${headerLeft}"
+      right-image="${headerRight}"
+      :scale="0.6"
+      :left-x="-320"
+      :left-y="1"
+      :right-x="-85"
+      :right-y="1"
+    />`
   }));
