@@ -1,17 +1,20 @@
+.left-image[data-v-3d46f752], .right-image[data-v-3d46f752] {
+  pointer-events: none; }
+
 @media (max-width: 1250px) and (min-width: 1101px) {
-  .left-image[data-v-648f4a7e] {
+  .left-image[data-v-3d46f752] {
     left: calc(100vw - 1265px) !important; }
-  .right-image[data-v-648f4a7e] {
+  .right-image[data-v-3d46f752] {
     width: calc(-780px + 100vw) !important; } }
 
 @media (max-width: 1100px) and (min-width: 626px) {
-  .left-image[data-v-648f4a7e] {
+  .left-image[data-v-3d46f752] {
     left: -155px !important; }
-  .right-image[data-v-648f4a7e] {
+  .right-image[data-v-3d46f752] {
     width: 326px !important; } }
 
 @media (max-width: 625px) {
-  .left-image[data-v-648f4a7e] {
+  .left-image[data-v-3d46f752] {
     left: -270px !important; }
-  .right-image[data-v-648f4a7e] {
+  .right-image[data-v-3d46f752] {
     width: 215px !important; } }

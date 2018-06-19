@@ -41,6 +41,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.left-image, .right-image {
+  pointer-events: none;
+}
+
 @media (max-width: 1250px) and (min-width: 1101px) {
   .left-image {
     left: calc(100vw - 1265px) !important;
