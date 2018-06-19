@@ -2,7 +2,7 @@
   <div>
     <div class="left-image" :style="{
       position: 'absolute',
-      zIndex: '-1',
+      zIndex: '0',
       left: '-30px',
       top: '0px',
     }">
@@ -16,7 +16,7 @@
     </div>
     <div class="right-image" :style="{
       position: 'absolute',
-      zIndex: '-1',
+      zIndex: '0',
       width: '450px',
       height: '700px',
       overflow: 'hidden',
