@@ -1,4 +1,4 @@
-.app-header[data-v-4d12ea44] {
+.app-header[data-v-26fd59bb] {
   font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
@@ -6,15 +6,15 @@
   padding-top: 10px;
   padding-bottom: 10px; }
 
-.app-header .app-header-columns[data-v-4d12ea44] {
+.app-header .app-header-columns[data-v-26fd59bb] {
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 25px; }
 
-.logo-container[data-v-4d12ea44] {
+.logo-container[data-v-26fd59bb] {
   margin: 0; }
 
-.mobile-menu[data-v-4d12ea44] {
+.mobile-menu[data-v-26fd59bb] {
   position: fixed;
   background: #111;
   text-align: right;
@@ -25,44 +25,44 @@
   padding: 23px;
   z-index: 3000; }
 
-.hamburger-container[data-v-4d12ea44] {
+.hamburger-container[data-v-26fd59bb] {
   justify-content: flex-end;
   margin-left: 30px; }
 
-.hamburger-container .mobile-menu-icon-hamburger[data-v-4d12ea44] {
+.hamburger-container .mobile-menu-icon-hamburger[data-v-26fd59bb] {
   font-size: 32px;
   line-height: 20px;
   text-align: right;
   vertical-align: top; }
 
-.mobile-menu-icon-close[data-v-4d12ea44] {
+.mobile-menu-icon-close[data-v-26fd59bb] {
   width: 100%;
   font-size: 2em;
   padding-bottom: 25px; }
 
-.icon[data-v-4d12ea44] {
+.icon[data-v-26fd59bb] {
   color: #fff;
   cursor: pointer; }
 
-.mobile-links[data-v-4d12ea44] {
+.mobile-links[data-v-26fd59bb] {
   text-align: center;
   font-size: 1.2em;
   padding-left: 0; }
 
-.links[data-v-4d12ea44] {
+.links[data-v-26fd59bb] {
   text-align: right;
   font-size: 1.06em;
   margin: 0;
   padding: 0 25px 0 0; }
 
-.links .web-header-link[data-v-4d12ea44] {
+.links .web-header-link[data-v-26fd59bb] {
   display: inline;
   margin-left: 90px; }
 
-.links .web-header-link[data-v-4d12ea44]:first-child {
+.links .web-header-link[data-v-26fd59bb]:first-child {
   margin-left: 0; }
 
-.header-button[data-v-4d12ea44] {
+.header-button[data-v-26fd59bb] {
   font-size: .95em;
   color: #fff;
   padding: 13px 22px;
@@ -74,21 +74,21 @@
   transition: all .2s;
   font-size: .9em; }
 
-.header-button[data-v-4d12ea44]:hover {
+.header-button[data-v-26fd59bb]:hover {
   color: #111;
   background-color: #fff;
   border-color: #111; }
 
-.link[data-v-4d12ea44] {
+.link[data-v-26fd59bb] {
   position: relative; }
 
-.link a[data-v-4d12ea44] {
+.link a[data-v-26fd59bb] {
   color: #fff;
   font-weight: 400;
   font-size: .9em;
   cursor: pointer; }
 
-.link[data-v-4d12ea44]:before {
+.link[data-v-26fd59bb]:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -99,37 +99,37 @@
   transform: scaleX(0);
   transition: all .15s ease-out 0s; }
 
-.link[data-v-4d12ea44]:hover:before {
+.link[data-v-26fd59bb]:hover:before {
   visibility: visible;
   transform: scaleX(1); }
 
-.link:hover a[data-v-4d12ea44] {
+.link:hover a[data-v-26fd59bb] {
   color: #d1d1d1;
   transition: all .15s ease-in-out 0s; }
 
-.dropdown-header-text[data-v-4d12ea44] {
+.dropdown-header-text[data-v-26fd59bb] {
   color: #fff;
   font-size: .9em; }
 
-.dropdown[data-v-4d12ea44] {
+.dropdown[data-v-26fd59bb] {
   vertical-align: baseline; }
 
-.dropdown-menu[data-v-4d12ea44] {
+.dropdown-menu[data-v-26fd59bb] {
   min-width: 130px; }
 
-.dropdown-item[data-v-4d12ea44] {
+.dropdown-item[data-v-26fd59bb] {
   font-weight: 400;
   font-size: .9em;
   padding-right: 0;
   cursor: pointer; }
 
-.dropdown-content[data-v-4d12ea44] {
+.dropdown-content[data-v-26fd59bb] {
   text-align: left; }
 
-.header-form[data-v-4d12ea44] {
+.header-form[data-v-26fd59bb] {
   width: 100%; }
 
-.header-search-bar[data-v-4d12ea44] {
+.header-search-bar[data-v-26fd59bb] {
   font-size: 1em;
   border-radius: 6px;
   border: 1px solid transparent;
@@ -140,12 +140,12 @@
   outline: 0;
   width: 100%; }
 
-.header-search-bar[data-v-4d12ea44]:focus {
+.header-search-bar[data-v-26fd59bb]:focus {
   border-color: #515cf9;
   filter: brightness(120%);
   color: #fff; }
 
-.align-center[data-v-4d12ea44] {
+.align-center[data-v-26fd59bb] {
   padding: 0;
   display: flex;
   align-items: center; }

@@ -5,7 +5,7 @@
         <component :is="linkComponent" to='/'>
           <img :style="{
             margin: '12px 0',
-          }" :src="logo" />
+          }" :src="logo" alt="Asyncy"/>
         </component>
       </div>
 

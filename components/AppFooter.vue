@@ -128,7 +128,7 @@ export default {
 }
 
 .copyright {
-  color: #666;
+  color: #888;
   margin-top: 1em;
 }
 </style>
