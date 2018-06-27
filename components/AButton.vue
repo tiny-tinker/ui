@@ -20,7 +20,7 @@ export default {
   border-radius: 4px;
   cursor: pointer;
   background-color: #111;
-  border: 1px solid #111;
+  border: 1px solid #8F8F8F;
   text-align: center;
   transition: all 0.2s;
   font-size: 0.9em;
