@@ -195,7 +195,6 @@ export default {
 }
 
 .header-button {
-  font-size: 0.95em;
   color: white;
   padding: 13px 22px;
   border-radius: 6px;

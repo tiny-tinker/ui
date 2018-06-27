@@ -26,4 +26,4 @@ const fromComponents = (componentNames) => {
   }));
 };
 
-export default fromComponents(['CookiesBanner', 'AppHeader', 'AppFooter', 'HeroBackground']);
+export default fromComponents(['CookiesBanner', 'AppHeader', 'AppFooter', 'HeroBackground', 'AButton']);

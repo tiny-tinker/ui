@@ -9,6 +9,7 @@ import CookiesBanner from '../components/CookiesBanner.vue';
 import AppFooter from '../components/AppFooter.vue';
 import AppHeader from '../components/AppHeader.vue';
 import HeroBackground from '../components/HeroBackground.vue';
+import AButton from '../components/AButton.vue';
 
 import './external.scss';
 
@@ -56,4 +57,14 @@ storiesOf('App Header and Footer', module)
       :right-x="-85"
       :right-y="1"
     />`
+  }));
+
+storiesOf('Buttons', module)
+  .add('Black button', () => ({
+    components: { AButton },
+    template: `<a-button>Submit a service</a-button>`,
+  }))
+  .add('White button', () => ({
+    components: { AButton },
+    template: `<a-button color="white">Submit a service</a-button>`,
   }));
