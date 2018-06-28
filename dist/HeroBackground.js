@@ -47,7 +47,7 @@ var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=
     left: '-30px',
     top: '0px',
   })},[_c('img',{style:({
-      position: 'relative',
+      position: 'absolute',
       left: _vm.leftX ? (_vm.leftX + "px") : '-750px',
       top: _vm.leftY ? (_vm.leftY + "px") : '-45px',
       width: ("calc(1200px * " + (_vm.scale || 1) + ")"),
@@ -75,7 +75,7 @@ const __vue_template__ = typeof __vue_render__ !== 'undefined'
 /* style */
 const __vue_inject_styles__ = undefined;
 /* scoped */
-const __vue_scope_id__ = "data-v-3d46f752";
+const __vue_scope_id__ = "data-v-24f16287";
 /* module identifier */
 const __vue_module_identifier__ = undefined;
 /* functional template */

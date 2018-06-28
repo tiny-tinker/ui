@@ -7,7 +7,7 @@
       top: '0px',
     }">
       <img :src="leftImage" :style="{
-        position: 'relative',
+        position: 'absolute',
         left: leftX ? `${leftX}px` : '-750px',
         top: leftY ? `${leftY}px` : '-45px',
         width: `calc(1200px * ${scale || 1})`,
