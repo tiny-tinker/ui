@@ -18,22 +18,22 @@ var script = {
 
 const __vue_script__ = script;
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app-footer"},[_c('div',{staticClass:"columns"},[_vm._m(0),_vm._v(" "),_vm._m(1),_vm._v(" "),_vm._m(2),_vm._v(" "),_c('div',{staticClass:"column"},[_c('div',[_c('a',{attrs:{"href":"http://asyncy.click/slack","target":"_blank"}},[_c('img',{style:({
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app-footer"},[_c('div',{staticClass:"columns"},[_vm._m(0),_vm._v(" "),_vm._m(1),_vm._v(" "),_vm._m(2),_vm._v(" "),_c('div',{staticClass:"column"},[_c('div',[_c('a',{attrs:{"href":"http://asyncy.click/slack","target":"_blank","rel":"noopener"}},[_c('img',{style:({
             display: 'inline-block',
             width: '30px',
             opacity: 0.8,
-          }),attrs:{"src":_vm.slackLogo,"alt":"Slack"}})]),_vm._v(" "),_c('a',{attrs:{"href":"https://github.com/asyncy","target":"_blank"}},[_c('img',{style:({
+          }),attrs:{"src":_vm.slackLogo,"alt":"Slack"}})]),_vm._v(" "),_c('a',{attrs:{"href":"https://github.com/asyncy","target":"_blank","rel":"noopener"}},[_c('img',{style:({
             display: 'inline-block',
             width: '30px',
             marginLeft: '25px',
             opacity: 0.8,
-          }),attrs:{"src":_vm.githubLogo,"alt":"Github"}})]),_vm._v(" "),_c('a',{attrs:{"href":"https://twitter.com/asyncy","target":"_blank"}},[_c('img',{style:({
+          }),attrs:{"src":_vm.githubLogo,"alt":"Github"}})]),_vm._v(" "),_c('a',{attrs:{"href":"https://twitter.com/asyncy","target":"_blank","rel":"noopener"}},[_c('img',{style:({
             display: 'inline-block',
             width: '30px',
             marginLeft: '25px',
             opacity: 0.8,
           }),attrs:{"src":_vm.twitterLogo,"alt":"Twitter"}})])]),_vm._v(" "),_c('div',{staticClass:"copyright"},[_vm._v("\n        © 2018 Asyncy, Inc.\n      ")])])])])};
-var __vue_staticRenderFns__ = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"column"},[_c('div',{staticClass:"menu-header"},[_vm._v("Product")]),_vm._v(" "),_c('ul',{staticClass:"ul"},[_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com/platform"}},[_vm._v("Platform")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://docs.asyncy.com"}},[_vm._v("Documentation")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://docs.asyncy.com/faq"}},[_vm._v("FAQ")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.click/feedback","target":"_blank"}},[_vm._v("Give Feedback")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"column"},[_c('div',{staticClass:"menu-header"},[_vm._v("Resources")]),_vm._v(" "),_c('ul',{staticClass:"ul"},[_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com/events"}},[_vm._v("Events")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://medium.com/asyncy"}},[_vm._v("Blog")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"column"},[_c('div',{staticClass:"menu-header"},[_vm._v("Company")]),_vm._v(" "),_c('ul',{staticClass:"ul"},[_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com//about"}},[_vm._v("About")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://angel.co/asyncy/jobs"}},[_vm._v("Jobs")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com/contact"}},[_vm._v("Contact")])])])])}];
+var __vue_staticRenderFns__ = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"column"},[_c('div',{staticClass:"menu-header"},[_vm._v("Product")]),_vm._v(" "),_c('ul',{staticClass:"ul"},[_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com/platform"}},[_vm._v("Platform")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://docs.asyncy.com"}},[_vm._v("Documentation")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://docs.asyncy.com/faq"}},[_vm._v("FAQ")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.click/feedback","target":"_blank","rel":"noopener"}},[_vm._v("Give Feedback")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"column"},[_c('div',{staticClass:"menu-header"},[_vm._v("Resources")]),_vm._v(" "),_c('ul',{staticClass:"ul"},[_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com/events"}},[_vm._v("Events")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://medium.com/asyncy"}},[_vm._v("Blog")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"column"},[_c('div',{staticClass:"menu-header"},[_vm._v("Company")]),_vm._v(" "),_c('ul',{staticClass:"ul"},[_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com//about"}},[_vm._v("About")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://angel.co/asyncy/jobs"}},[_vm._v("Jobs")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com/contact"}},[_vm._v("Contact")])])])])}];
 
 const __vue_template__ = typeof __vue_render__ !== 'undefined'
   ? { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ }
@@ -41,7 +41,7 @@ const __vue_template__ = typeof __vue_render__ !== 'undefined'
 /* style */
 const __vue_inject_styles__ = undefined;
 /* scoped */
-const __vue_scope_id__ = "data-v-3c7b931c";
+const __vue_scope_id__ = "data-v-1c5ac8e4";
 /* module identifier */
 const __vue_module_identifier__ = undefined;
 /* functional template */

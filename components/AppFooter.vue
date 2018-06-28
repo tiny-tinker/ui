@@ -8,7 +8,7 @@
           <li class="li"><a href='https://docs.asyncy.com'>Documentation</a></li>
           <li class="li"><a href='https://docs.asyncy.com/faq'>FAQ</a></li>
           <li class="li">
-            <a href="https://asyncy.click/feedback" target="_blank">Give Feedback</a>
+            <a href="https://asyncy.click/feedback" target="_blank" rel="noopener">Give Feedback</a>
           </li>
         </ul>
       </nav>
@@ -29,14 +29,14 @@
       </nav>
       <div class='column'>
         <div>
-          <a href='http://asyncy.click/slack' target="_blank">
+          <a href='http://asyncy.click/slack' target="_blank" rel="noopener">
             <img :src="slackLogo" :style="{
               display: 'inline-block',
               width: '30px',
               opacity: 0.8,
             }" alt="Slack"/>
           </a>
-          <a href='https://github.com/asyncy' target="_blank">
+          <a href='https://github.com/asyncy' target="_blank" rel="noopener">
             <img :src="githubLogo" :style="{
               display: 'inline-block',
               width: '30px',
@@ -44,7 +44,7 @@
               opacity: 0.8,
             }" alt="Github"/>
           </a>
-          <a href='https://twitter.com/asyncy' target="_blank">
+          <a href='https://twitter.com/asyncy' target="_blank" rel="noopener">
             <img :src="twitterLogo" :style="{
               display: 'inline-block',
               width: '30px',
