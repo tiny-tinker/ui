@@ -37,6 +37,7 @@ storiesOf('App Header and Footer', module)
     components: { AppHeader },
     template: `<div><app-header link-component="a" :show-search="true" :links="[
       { text: 'Explore', to: '/' },
+      { text: 'About Hub', to: '/' },
       { text: 'Platform', to: '/platform' },
       { text: 'Documentation', to: 'https://docs.asyncy.com'},
       { text: 'Submit a service', to: '/', button: true },

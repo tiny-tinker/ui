@@ -128,7 +128,7 @@ export default {
 
   .app-header-columns {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1440px;
     padding: 0 25px;
   }
 }
@@ -182,7 +182,7 @@ export default {
   text-align: right;
   font-size: 1.06em;
   margin: 0;
-  padding: 0 25px 0 0;
+  padding: 0;
 
   .web-header-link {
     display: inline;
@@ -191,6 +191,10 @@ export default {
     &:first-child {
       margin-left: 0px;
     }
+  }
+
+  .web-header-link:first-child:nth-last-child(5), .web-header-link:first-child:nth-last-child(5) ~ .web-header-link {
+    margin-left: 65px;
   }
 }
 
