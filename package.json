@@ -28,7 +28,8 @@
     "build": "NODE_ENV=production ./node_modules/.bin/rollup --config build/rollup.config.js",
     "watch": "NODE_ENV=production ./node_modules/.bin/rollup --config build/rollup.config.js -w",
 	"dev": "run-p storybook watch",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+	"storybook-build": "build-storybook -c .storybook -o dist/"
   },
   "repository": {
     "type": "git",
