@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/vue';
 import blackLogo from '../assets/images/logo_black.svg';
 import whiteLogo from '../assets/images/logo.svg';
 
+import '../assets/styles/global.styl';
+
 storiesOf('Assets/Logo', module)
   .add('Black Logo', () => ({
     template: `<div><img src="${blackLogo}"/></div>`

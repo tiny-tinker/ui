@@ -10,7 +10,7 @@ import AppFooter from '../components/AppFooter.vue';
 import AppHeader from '../components/AppHeader.vue';
 import HeroBackground from '../components/HeroBackground.vue';
 
-import './external.styl';
+import '../assets/styles/global.styl';
 
 storiesOf('Asyncy Components/Cookie Banner', module)
   .add('Cookie Banner', () => ({

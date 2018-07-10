@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/vue';
 import AButton from '../components/AButton';
 import AInput from '../components/AInput';
 
+import '../assets/styles/global.styl';
+
 storiesOf('General/Buttons', module)
   .add('Black button', () => ({
     components: { AButton },
