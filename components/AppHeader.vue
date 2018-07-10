@@ -1,17 +1,17 @@
 <template>
   <div class="app-header">
     <div class="columns app-header-columns is-mobile">
-      <div class="column logo-container align-center">
+      <div class="column logo-container align-center is-narrow">
         <component :is="linkComponent" to='/'>
           <img :style="{
-            margin: '12px 0',
+            margin: '6px 0 0 0'
           }" :src="logo" alt="Asyncy"/>
         </component>
       </div>
 
       <div class="column is-hidden-touch" />
 
-      <div v-if="showSearch" class="column align-center is-hidden-mobile search-container is-2">
+      <div v-if="showSearch" class="column align-center is-hidden-mobile search-container is-narrow">
         <form class="header-form" @submit.prevent="onSubmit">
           <input class="header-search-bar" :placeholder="placeholder" v-model="search" />
         </form>
@@ -29,24 +29,15 @@
               
               <button v-if="link.button" class="header-button">{{link.text}}</button>
 
-              <div v-if="link.items" class="dropdown is-hoverable is-right">
-                <div class="dropdown-trigger">
-                  <span class="dropdown-header-text" v-html="link.text"/>
-                </div>
-                <div class="dropdown-menu" role="menu">
-                  <div class="dropdown-content">
-                    <component :is="linkComponent" class="dropdown-item" v-for="(item, index) in link.items" :key="index" :to="item.to">
-                      {{item.text}}
-                    </component>
-                  </div>
-                </div>
-              </div>
+              <dropdown :items="link.items" v-if="link.items">
+                <span class="dropdown-header-text" v-html="link.text" :link-component="linkComponent"/>
+              </dropdown>
             </li>
           </ul>
         </nav>
       </div>
 
-      <div class="column is-hidden-desktop is-narrow align-center hamburger-container">
+      <div class="column is-hidden-desktop align-center hamburger-container">
         <div class="mobile-menu-icon-hamburger">
           <a class="icon" @click="openMenu">☰</a>
         </div>
@@ -81,10 +72,12 @@
 </template>
 
 <script>
+import Dropdown from './Dropdown.vue';
 import logo from '../assets/images/logo.svg';
 
 export default {
   props: ['links', 'linkComponent', 'showSearch', 'onSearch', 'placeholderText'],
+  components: { Dropdown },
   data() {
     return {
       logo,
@@ -117,7 +110,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="styl">
 .app-header {
   font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -125,8 +118,12 @@ export default {
   background: #111;
   padding-top: 10px;
   padding-bottom: 10px;
+  min-height: 66px;
+  display: flex;
+  align-items: center;
 
   .app-header-columns {
+    flex-grow: 1;
     margin: 0 auto;
     max-width: 1440px;
     padding: 0 25px;
@@ -273,6 +270,9 @@ export default {
 .header-form {
   width: 100%;
 }
+
+.search-container
+  margin-left 2rem
 
 .header-search-bar {
   font-size: 1em;

@@ -1,19 +1,27 @@
 import vue from 'rollup-plugin-vue';
 import svg from 'rollup-plugin-svg';
-import scss from 'rollup-plugin-scss';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
-const fromComponents = (componentNames) => {
-  return componentNames.map((name) => ({
+const toRollupConf = (name, isSSR) => {
+  const outputFile = isSSR ? `dist/${name}.ssr.js` : `dist/${name}.js`;
+  return {
     input: `components/${name}.vue`,
     output: {
       format: 'esm',
-      file: `dist/${name}.js`,
+      file: outputFile,
     },
     plugins: [
-      vue({ css: false }),
-      scss({ output: `dist/${name}.css` }),
+      vue({
+        style: {
+          preprocessOptions: {
+            stylus: {},
+          },
+        },
+        template: {
+          optimizeSSR: isSSR,
+        },
+      }),
       svg(),
       resolve({
         customResolveOptions: {
@@ -22,8 +30,15 @@ const fromComponents = (componentNames) => {
       }),
       commonjs(),
     ],
-    external: [ 'vue', 'vue-bus' ],
-  }));
+    external: [ 'vue' ],
+  }
 };
 
-export default fromComponents(['CookiesBanner', 'AppHeader', 'AppFooter', 'HeroBackground', 'AButton']);
+const fromComponents = (componentNames) => {
+  return componentNames.map(name => toRollupConf(name, false))
+    .concat(componentNames.map(name => toRollupConf(name, true)));
+};
+
+const components = ['CookiesBanner', 'AppHeader', 'AppFooter', 'HeroBackground', 'AButton', 'AInput'];
+
+export default fromComponents(components);

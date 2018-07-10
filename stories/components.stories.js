@@ -9,17 +9,16 @@ import CookiesBanner from '../components/CookiesBanner.vue';
 import AppFooter from '../components/AppFooter.vue';
 import AppHeader from '../components/AppHeader.vue';
 import HeroBackground from '../components/HeroBackground.vue';
-import AButton from '../components/AButton.vue';
 
-import './external.scss';
+import './external.styl';
 
-storiesOf('Cookies', module)
-  .add('give and revoke consent for cookies', () => ({
+storiesOf('Asyncy Components/Cookie Banner', module)
+  .add('Cookie Banner', () => ({
     components: { CookiesBanner },
     template: '<div><cookies-banner :force-active="true"/></div>'
   }));
 
-storiesOf('App Header and Footer', module)
+storiesOf('Asyncy Components/Header', module)
   .add('Header with dropdown', () => ({
     components: { AppHeader },
     template: `<div><app-header link-component="a" :links="[  { text: 'Platform', to: '/platform' },
@@ -43,10 +42,14 @@ storiesOf('App Header and Footer', module)
       { text: 'Submit a service', to: '/', button: true },
     ]"/></div>`
   }))
-  .add('a footer', () => ({
+
+storiesOf('Asyncy Components/Footer', module)
+  .add('Footer', () => ({
     components: { AppFooter },
     template: '<div><app-footer/></div>'
-  }))
+  }));
+
+storiesOf('Header background', module)
   .add('Header background', () => ({
     components: { HeroBackground },
     template: `<hero-background
@@ -58,14 +61,4 @@ storiesOf('App Header and Footer', module)
       :right-x="-85"
       :right-y="1"
     />`
-  }));
-
-storiesOf('Buttons', module)
-  .add('Black button', () => ({
-    components: { AButton },
-    template: `<a-button>Submit a service</a-button>`,
-  }))
-  .add('White button', () => ({
-    components: { AButton },
-    template: `<a-button color="white">Submit a service</a-button>`,
   }));

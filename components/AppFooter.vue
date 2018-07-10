@@ -77,7 +77,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="styl">
 .app-footer {
   font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   background: #111;

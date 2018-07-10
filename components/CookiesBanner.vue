@@ -91,7 +91,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="styl">
 .cookies-banner {
   font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   background-color: #111;

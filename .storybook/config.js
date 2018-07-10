@@ -1,9 +1,9 @@
 import { configure } from '@storybook/vue';
 
-import Vue from 'vue';
+const req = require.context('../stories', true)
 
 function loadStories() {
-    require('../stories');
+  req.keys().forEach((filename) => req(filename))
 }
 
 configure(loadStories, module);

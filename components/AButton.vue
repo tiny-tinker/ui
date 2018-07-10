@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="styl">
 .button {
   font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 

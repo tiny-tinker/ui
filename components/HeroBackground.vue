@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="styl">
 .left-image, .right-image {
   pointer-events: none;
 }

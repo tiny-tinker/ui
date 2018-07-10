@@ -1449,7 +1449,7 @@ function isEULocale() {
   var locale = browserLocale();
   var code = locale;
 
-  if (locale.includes('-')) {
+  if (locale.indexOf('-') >= 0) {
     code = locale.split('-')[1];
   }
 
@@ -1608,122 +1608,150 @@ var script = {
   }
 };
 
-const __vue_script__ = script;
+/* script */
+            const __vue_script__ = script;
+            
 /* template */
 var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.active)?_c('div',[_c('transition',{attrs:{"name":"fade"}},[(_vm.show && !_vm.showRevoked)?_c('div',{staticClass:"cookies-banner"},[_c('div',{staticClass:"side1"},[_vm._v("\n        We use cookies to track your usage of this site. We also share information about your usage with third-party services to help improve your experience. We will never track you without your permission.\n      ")]),_vm._v(" "),_c('div',{staticClass:"side2"},[_c('button',{staticClass:"cookie-button",on:{"click":_vm.allowAllCookies}},[_vm._v("Allow all cookies")])])]):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.showThanks)?_c('div',{staticClass:"cookies-banner"},[_vm._v("\n      Thanks! 🎉 You can always revoke your consent at the bottom of the page.\n    ")]):_vm._e()]),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.showRevoked)?_c('div',{staticClass:"cookies-banner"},[_vm._v("\n      Your consent has been revoked. We won't track you any longer.\n    ")]):_vm._e()]),_vm._v(" "),(!_vm.show)?_c('div',{staticClass:"revoke-banner"},[_vm._v("\n    Thanks for letting us use cookies! "),_c('a',{attrs:{"href":"javascript:void(0)"},on:{"click":_vm.revokeConsent}},[_vm._v("Revoke your consent.")])]):_vm._e()],1):_vm._e()};
 var __vue_staticRenderFns__ = [];
 
-const __vue_template__ = typeof __vue_render__ !== 'undefined'
-  ? { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ }
-  : {};
-/* style */
-const __vue_inject_styles__ = undefined;
-/* scoped */
-const __vue_scope_id__ = "data-v-129c153c";
-/* module identifier */
-const __vue_module_identifier__ = undefined;
-/* functional template */
-const __vue_is_functional_template__ = false;
-/* component normalizer */
-function __vue_normalize__(
-  template, style, script$$1,
-  scope, functional, moduleIdentifier,
-  createInjector, createInjectorSSR
-) {
-  const component = (typeof script$$1 === 'function' ? script$$1.options : script$$1) || {};
+  /* style */
+  const __vue_inject_styles__ = function (inject) {
+    if (!inject) return
+    inject("data-v-070732a1_0", { source: "\n.cookies-banner[data-v-070732a1]{font-family:Graphik Web,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif;background-color:#111;color:#fff;padding:25px;width:100%;display:flex;position:fixed;z-index:200;bottom:0;opacity:.9;pointer-events:none\n}\n.side1[data-v-070732a1]{line-height:1.8em;display:inline-block;width:70%;flex-grow:1\n}\n.side2[data-v-070732a1]{flex-grow:1;display:inline-flex;justify-content:center;align-items:center\n}\n.cookie-button[data-v-070732a1]{color:#fff;background-color:#515cf9;font-size:1.1em;border:none;padding:15px 20px;border-radius:3px;transition:all .2s;pointer-events:auto;opacity:1\n}\n.cookie-button[data-v-070732a1]:hover{filter:brightness(125%)\n}\n.fade-enter-active[data-v-070732a1],.fade-leave-active[data-v-070732a1]{transition:opacity .5s\n}\n.fade-enter[data-v-070732a1],.fade-leave-to[data-v-070732a1]{opacity:0\n}\n.revoke-banner[data-v-070732a1]{text-align:center;font-family:Graphik Web,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif;background-color:#111;font-size:.8em;color:#666;width:100%;padding:25px\n}", map: undefined, media: undefined });
 
-  if (!component.render) {
-    component.render = template.render;
-    component.staticRenderFns = template.staticRenderFns;
-    component._compiled = true;
+  };
+  /* scoped */
+  const __vue_scope_id__ = "data-v-070732a1";
+  /* module identifier */
+  const __vue_module_identifier__ = undefined;
+  /* functional template */
+  const __vue_is_functional_template__ = false;
+  /* component normalizer */
+  function __vue_normalize__(
+    template, style, script$$1,
+    scope, functional, moduleIdentifier,
+    createInjector, createInjectorSSR
+  ) {
+    const component = (typeof script$$1 === 'function' ? script$$1.options : script$$1) || {};
 
-    if (functional) component.functional = true;
+    if (!component.render) {
+      component.render = template.render;
+      component.staticRenderFns = template.staticRenderFns;
+      component._compiled = true;
+
+      if (functional) component.functional = true;
+    }
+
+    component._scopeId = scope;
+
+    {
+      let hook;
+      if (style) {
+        hook = function(context) {
+          style.call(this, createInjector(context));
+        };
+      }
+
+      if (hook !== undefined) {
+        if (component.functional) {
+          // register for functional component in vue file
+          const originalRender = component.render;
+          component.render = function renderWithStyleInjection(h, context) {
+            hook.call(context);
+            return originalRender(h, context)
+          };
+        } else {
+          // inject component registration as beforeCreate hook
+          const existing = component.beforeCreate;
+          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+        }
+      }
+    }
+
+    return component
   }
+  /* style inject */
+  function __vue_create_injector__() {
+    const head = document.head || document.getElementsByTagName('head')[0];
+    const styles = __vue_create_injector__.styles || (__vue_create_injector__.styles = {});
+    const isOldIE =
+      typeof navigator !== 'undefined' &&
+      /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
 
-  component._scopeId = scope;
+    return function addStyle(id, css) {
+      if (document.querySelector('style[data-vue-ssr-id~="' + id + '"]')) return // SSR styles are present.
 
-  return component
-}
-/* style inject */
-function __vue_create_injector__() {
-  const head = document.head || document.getElementsByTagName('head')[0];
-  const styles = __vue_create_injector__.styles || (__vue_create_injector__.styles = {});
-  const isOldIE =
-    typeof navigator !== 'undefined' &&
-    /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
+      const group = isOldIE ? css.media || 'default' : id;
+      const style = styles[group] || (styles[group] = { ids: [], parts: [], element: undefined });
 
-  return function addStyle(id, css) {
-    if (document.querySelector('style[data-vue-ssr-id~="' + id + '"]')) return // SSR styles are present.
+      if (!style.ids.includes(id)) {
+        let code = css.source;
+        let index = style.ids.length;
 
-    const group = isOldIE ? css.media || 'default' : id;
-    const style = styles[group] || (styles[group] = { ids: [], parts: [], element: undefined });
+        style.ids.push(id);
 
-    if (!style.ids.includes(id)) {
-      let code = css.source;
-      let index = style.ids.length;
-
-      style.ids.push(id);
-
-      if (css.map) {
-        // https://developer.chrome.com/devtools/docs/javascript-debugging
-        // this makes source maps inside style tags work properly in Chrome
-        code += '\n/*# sourceURL=' + css.map.sources[0] + ' */';
-        // http://stackoverflow.com/a/26603875
-        code +=
-          '\n/*# sourceMappingURL=data:application/json;base64,' +
-          btoa(unescape(encodeURIComponent(JSON.stringify(css.map)))) +
-          ' */';
-      }
-
-      if (isOldIE) {
-        style.element = style.element || document.querySelector('style[data-group=' + group + ']');
-      }
-
-      if (!style.element) {
-        const el = style.element = document.createElement('style');
-        el.type = 'text/css';
-
-        if (css.media) el.setAttribute('media', css.media);
-        if (isOldIE) {
-          el.setAttribute('data-group', group);
-          el.setAttribute('data-next-index', '0');
+        if (css.map) {
+          // https://developer.chrome.com/devtools/docs/javascript-debugging
+          // this makes source maps inside style tags work properly in Chrome
+          code += '\n/*# sourceURL=' + css.map.sources[0] + ' */';
+          // http://stackoverflow.com/a/26603875
+          code +=
+            '\n/*# sourceMappingURL=data:application/json;base64,' +
+            btoa(unescape(encodeURIComponent(JSON.stringify(css.map)))) +
+            ' */';
         }
 
-        head.appendChild(el);
-      }
+        if (isOldIE) {
+          style.element = style.element || document.querySelector('style[data-group=' + group + ']');
+        }
 
-      if (isOldIE) {
-        index = parseInt(style.element.getAttribute('data-next-index'));
-        style.element.setAttribute('data-next-index', index + 1);
-      }
+        if (!style.element) {
+          const el = style.element = document.createElement('style');
+          el.type = 'text/css';
 
-      if (style.element.styleSheet) {
-        style.parts.push(code);
-        style.element.styleSheet.cssText = style.parts
-          .filter(Boolean)
-          .join('\n');
-      } else {
-        const textNode = document.createTextNode(code);
-        const nodes = style.element.childNodes;
-        if (nodes[index]) style.element.removeChild(nodes[index]);
-        if (nodes.length) style.element.insertBefore(textNode, nodes[index]);
-        else style.element.appendChild(textNode);
+          if (css.media) el.setAttribute('media', css.media);
+          if (isOldIE) {
+            el.setAttribute('data-group', group);
+            el.setAttribute('data-next-index', '0');
+          }
+
+          head.appendChild(el);
+        }
+
+        if (isOldIE) {
+          index = parseInt(style.element.getAttribute('data-next-index'));
+          style.element.setAttribute('data-next-index', index + 1);
+        }
+
+        if (style.element.styleSheet) {
+          style.parts.push(code);
+          style.element.styleSheet.cssText = style.parts
+            .filter(Boolean)
+            .join('\n');
+        } else {
+          const textNode = document.createTextNode(code);
+          const nodes = style.element.childNodes;
+          if (nodes[index]) style.element.removeChild(nodes[index]);
+          if (nodes.length) style.element.insertBefore(textNode, nodes[index]);
+          else style.element.appendChild(textNode);
+        }
       }
     }
   }
-}
-/* style inject SSR */
+  /* style inject SSR */
+  
 
-
-var CookiesBanner = __vue_normalize__(
-  __vue_template__,
-  __vue_inject_styles__,
-  typeof __vue_script__ === 'undefined' ? {} : __vue_script__,
-  __vue_scope_id__,
-  __vue_is_functional_template__,
-  __vue_module_identifier__,
-  typeof __vue_create_injector__ !== 'undefined' ? __vue_create_injector__ : function () {},
-  typeof __vue_create_injector_ssr__ !== 'undefined' ? __vue_create_injector_ssr__ : function () {}
-);
+  
+  var CookiesBanner = __vue_normalize__(
+    { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
+    __vue_inject_styles__,
+    __vue_script__,
+    __vue_scope_id__,
+    __vue_is_functional_template__,
+    __vue_module_identifier__,
+    __vue_create_injector__,
+    undefined
+  );
 
 export default CookiesBanner;

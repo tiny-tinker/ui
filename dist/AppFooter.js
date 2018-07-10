@@ -16,7 +16,9 @@ var script = {
   },
 };
 
-const __vue_script__ = script;
+/* script */
+            const __vue_script__ = script;
+            
 /* template */
 var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app-footer"},[_c('div',{staticClass:"columns"},[_vm._m(0),_vm._v(" "),_vm._m(1),_vm._v(" "),_vm._m(2),_vm._v(" "),_c('div',{staticClass:"column"},[_c('div',[_c('a',{attrs:{"href":"http://asyncy.click/slack","target":"_blank","rel":"noopener"}},[_c('img',{style:({
             display: 'inline-block',
@@ -35,117 +37,143 @@ var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=
           }),attrs:{"src":_vm.twitterLogo,"alt":"Twitter"}})])]),_vm._v(" "),_c('div',{staticClass:"copyright"},[_vm._v("\n        © 2018 Asyncy, Inc.\n      ")])])])])};
 var __vue_staticRenderFns__ = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"column"},[_c('div',{staticClass:"menu-header"},[_vm._v("Product")]),_vm._v(" "),_c('ul',{staticClass:"ul"},[_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com/platform"}},[_vm._v("Platform")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://docs.asyncy.com"}},[_vm._v("Documentation")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://docs.asyncy.com/faq"}},[_vm._v("FAQ")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.click/feedback","target":"_blank","rel":"noopener"}},[_vm._v("Give Feedback")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"column"},[_c('div',{staticClass:"menu-header"},[_vm._v("Resources")]),_vm._v(" "),_c('ul',{staticClass:"ul"},[_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com/events"}},[_vm._v("Events")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://medium.com/asyncy"}},[_vm._v("Blog")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"column"},[_c('div',{staticClass:"menu-header"},[_vm._v("Company")]),_vm._v(" "),_c('ul',{staticClass:"ul"},[_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com//about"}},[_vm._v("About")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://angel.co/asyncy/jobs"}},[_vm._v("Jobs")])]),_vm._v(" "),_c('li',{staticClass:"li"},[_c('a',{attrs:{"href":"https://asyncy.com/contact"}},[_vm._v("Contact")])])])])}];
 
-const __vue_template__ = typeof __vue_render__ !== 'undefined'
-  ? { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ }
-  : {};
-/* style */
-const __vue_inject_styles__ = undefined;
-/* scoped */
-const __vue_scope_id__ = "data-v-1c5ac8e4";
-/* module identifier */
-const __vue_module_identifier__ = undefined;
-/* functional template */
-const __vue_is_functional_template__ = false;
-/* component normalizer */
-function __vue_normalize__(
-  template, style, script$$1,
-  scope, functional, moduleIdentifier,
-  createInjector, createInjectorSSR
-) {
-  const component = (typeof script$$1 === 'function' ? script$$1.options : script$$1) || {};
+  /* style */
+  const __vue_inject_styles__ = function (inject) {
+    if (!inject) return
+    inject("data-v-6858addc_0", { source: "\n.app-footer[data-v-6858addc]{font-family:Graphik Web,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif;background:#111;font-size:.9em;padding-top:75px;padding-bottom:55px\n}\n.app-footer .columns[data-v-6858addc]{max-width:1000px;margin:0 auto;padding:0 25px\n}\n.ul[data-v-6858addc]{list-style:none;padding-left:0;text-align:left\n}\n.li[data-v-6858addc]{font-size:1.1em;margin-bottom:.5em\n}\n.li a[data-v-6858addc]{color:#a3a3a3;font-size:.95em;font-weight:400;line-height:1.6em;text-decoration:none\n}\n.li a[data-v-6858addc]:hover{color:#fff;transition:color .3s ease-out;-webkit-transition:color .3s ease-out;-moz-transition:color .3s ease-out;-o-transition:color .3s ease-out;transition:color .3s ease-out\n}\n.menu-header[data-v-6858addc]{font-size:1em;color:#fff;margin-bottom:1em;text-align:left\n}\n.copyright[data-v-6858addc]{color:#888;margin-top:1em\n}", map: undefined, media: undefined });
 
-  if (!component.render) {
-    component.render = template.render;
-    component.staticRenderFns = template.staticRenderFns;
-    component._compiled = true;
+  };
+  /* scoped */
+  const __vue_scope_id__ = "data-v-6858addc";
+  /* module identifier */
+  const __vue_module_identifier__ = undefined;
+  /* functional template */
+  const __vue_is_functional_template__ = false;
+  /* component normalizer */
+  function __vue_normalize__(
+    template, style, script$$1,
+    scope, functional, moduleIdentifier,
+    createInjector, createInjectorSSR
+  ) {
+    const component = (typeof script$$1 === 'function' ? script$$1.options : script$$1) || {};
 
-    if (functional) component.functional = true;
+    if (!component.render) {
+      component.render = template.render;
+      component.staticRenderFns = template.staticRenderFns;
+      component._compiled = true;
+
+      if (functional) component.functional = true;
+    }
+
+    component._scopeId = scope;
+
+    {
+      let hook;
+      if (style) {
+        hook = function(context) {
+          style.call(this, createInjector(context));
+        };
+      }
+
+      if (hook !== undefined) {
+        if (component.functional) {
+          // register for functional component in vue file
+          const originalRender = component.render;
+          component.render = function renderWithStyleInjection(h, context) {
+            hook.call(context);
+            return originalRender(h, context)
+          };
+        } else {
+          // inject component registration as beforeCreate hook
+          const existing = component.beforeCreate;
+          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+        }
+      }
+    }
+
+    return component
   }
+  /* style inject */
+  function __vue_create_injector__() {
+    const head = document.head || document.getElementsByTagName('head')[0];
+    const styles = __vue_create_injector__.styles || (__vue_create_injector__.styles = {});
+    const isOldIE =
+      typeof navigator !== 'undefined' &&
+      /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
 
-  component._scopeId = scope;
+    return function addStyle(id, css) {
+      if (document.querySelector('style[data-vue-ssr-id~="' + id + '"]')) return // SSR styles are present.
 
-  return component
-}
-/* style inject */
-function __vue_create_injector__() {
-  const head = document.head || document.getElementsByTagName('head')[0];
-  const styles = __vue_create_injector__.styles || (__vue_create_injector__.styles = {});
-  const isOldIE =
-    typeof navigator !== 'undefined' &&
-    /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
+      const group = isOldIE ? css.media || 'default' : id;
+      const style = styles[group] || (styles[group] = { ids: [], parts: [], element: undefined });
 
-  return function addStyle(id, css) {
-    if (document.querySelector('style[data-vue-ssr-id~="' + id + '"]')) return // SSR styles are present.
+      if (!style.ids.includes(id)) {
+        let code = css.source;
+        let index = style.ids.length;
 
-    const group = isOldIE ? css.media || 'default' : id;
-    const style = styles[group] || (styles[group] = { ids: [], parts: [], element: undefined });
+        style.ids.push(id);
 
-    if (!style.ids.includes(id)) {
-      let code = css.source;
-      let index = style.ids.length;
-
-      style.ids.push(id);
-
-      if (css.map) {
-        // https://developer.chrome.com/devtools/docs/javascript-debugging
-        // this makes source maps inside style tags work properly in Chrome
-        code += '\n/*# sourceURL=' + css.map.sources[0] + ' */';
-        // http://stackoverflow.com/a/26603875
-        code +=
-          '\n/*# sourceMappingURL=data:application/json;base64,' +
-          btoa(unescape(encodeURIComponent(JSON.stringify(css.map)))) +
-          ' */';
-      }
-
-      if (isOldIE) {
-        style.element = style.element || document.querySelector('style[data-group=' + group + ']');
-      }
-
-      if (!style.element) {
-        const el = style.element = document.createElement('style');
-        el.type = 'text/css';
-
-        if (css.media) el.setAttribute('media', css.media);
-        if (isOldIE) {
-          el.setAttribute('data-group', group);
-          el.setAttribute('data-next-index', '0');
+        if (css.map) {
+          // https://developer.chrome.com/devtools/docs/javascript-debugging
+          // this makes source maps inside style tags work properly in Chrome
+          code += '\n/*# sourceURL=' + css.map.sources[0] + ' */';
+          // http://stackoverflow.com/a/26603875
+          code +=
+            '\n/*# sourceMappingURL=data:application/json;base64,' +
+            btoa(unescape(encodeURIComponent(JSON.stringify(css.map)))) +
+            ' */';
         }
 
-        head.appendChild(el);
-      }
+        if (isOldIE) {
+          style.element = style.element || document.querySelector('style[data-group=' + group + ']');
+        }
 
-      if (isOldIE) {
-        index = parseInt(style.element.getAttribute('data-next-index'));
-        style.element.setAttribute('data-next-index', index + 1);
-      }
+        if (!style.element) {
+          const el = style.element = document.createElement('style');
+          el.type = 'text/css';
 
-      if (style.element.styleSheet) {
-        style.parts.push(code);
-        style.element.styleSheet.cssText = style.parts
-          .filter(Boolean)
-          .join('\n');
-      } else {
-        const textNode = document.createTextNode(code);
-        const nodes = style.element.childNodes;
-        if (nodes[index]) style.element.removeChild(nodes[index]);
-        if (nodes.length) style.element.insertBefore(textNode, nodes[index]);
-        else style.element.appendChild(textNode);
+          if (css.media) el.setAttribute('media', css.media);
+          if (isOldIE) {
+            el.setAttribute('data-group', group);
+            el.setAttribute('data-next-index', '0');
+          }
+
+          head.appendChild(el);
+        }
+
+        if (isOldIE) {
+          index = parseInt(style.element.getAttribute('data-next-index'));
+          style.element.setAttribute('data-next-index', index + 1);
+        }
+
+        if (style.element.styleSheet) {
+          style.parts.push(code);
+          style.element.styleSheet.cssText = style.parts
+            .filter(Boolean)
+            .join('\n');
+        } else {
+          const textNode = document.createTextNode(code);
+          const nodes = style.element.childNodes;
+          if (nodes[index]) style.element.removeChild(nodes[index]);
+          if (nodes.length) style.element.insertBefore(textNode, nodes[index]);
+          else style.element.appendChild(textNode);
+        }
       }
     }
   }
-}
-/* style inject SSR */
+  /* style inject SSR */
+  
 
-
-var AppFooter = __vue_normalize__(
-  __vue_template__,
-  __vue_inject_styles__,
-  typeof __vue_script__ === 'undefined' ? {} : __vue_script__,
-  __vue_scope_id__,
-  __vue_is_functional_template__,
-  __vue_module_identifier__,
-  typeof __vue_create_injector__ !== 'undefined' ? __vue_create_injector__ : function () {},
-  typeof __vue_create_injector_ssr__ !== 'undefined' ? __vue_create_injector_ssr__ : function () {}
-);
+  
+  var AppFooter = __vue_normalize__(
+    { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
+    __vue_inject_styles__,
+    __vue_script__,
+    __vue_scope_id__,
+    __vue_is_functional_template__,
+    __vue_module_identifier__,
+    __vue_create_injector__,
+    undefined
+  );
 
 export default AppFooter;
