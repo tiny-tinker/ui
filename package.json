@@ -5,7 +5,6 @@
   "main": "index.js",
   "dependencies": {
     "@segment/in-eu": "^0.2.0",
-    "bulma": "^0.7.1",
     "vue": "^2.5.16"
   },
   "devDependencies": {
@@ -32,11 +31,11 @@
   },
   "scripts": {
     "dev": "run-p storybook js-watch css-watch",
-	"build": "run-p js-build css-build",
+    "build": "run-p js-build css-build",
     "js-build": "NODE_ENV=production ./node_modules/.bin/rollup --config build/rollup.config.js",
     "js-watch": "NODE_ENV=production ./node_modules/.bin/rollup --config build/rollup.config.js -w",
-	"css-build": "stylus assets/styles/global.styl --include-css -r -c --out dist/css/",
-	"css-watch": "stylus assets/styles/global.styl --include-css -r -c -w --out dist/css/",
+    "css-build": "stylus assets/styles/global.styl --include-css -r -c --out dist/css/",
+    "css-watch": "stylus assets/styles/global.styl --include-css -r -c -w --out dist/css/",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook-build": "build-storybook -c .storybook -o site/"
   },
