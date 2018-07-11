@@ -31,12 +31,29 @@
 //
 //
 //
-//
-//
-//
 
 var script = {
   props: ['leftImage', 'rightImage', 'leftX', 'leftY', 'rightX', 'rightY', 'scale'],
+  data() {
+    return {
+      rightImageHeight: 700,
+      rightImageWidth: 1200,
+      leftImageHeight: 700,
+      leftImageWidth: 1200,
+    };
+  },
+  methods: {
+    setRightImageHeight(event) {
+      const image = event.target;
+      this.rightImageHeight = image.naturalHeight;
+      this.rightImageWidth = image.naturalWidth;
+    },
+    setLeftImageHeight(event) {
+      const image = event.target;
+      this.leftImageHeight = image.naturalHeight;
+      this.leftImageWidth = image.naturalWidth;
+    },
+  },
 };
 
 /* script */
@@ -46,39 +63,36 @@ var script = {
 var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"left-image",style:({
     position: 'absolute',
     zIndex: '0',
-    left: '-30px',
+    left: '0px',
     top: '0px',
   })},[_c('img',{style:({
-      position: 'absolute',
-      left: _vm.leftX ? (_vm.leftX + "px") : '-750px',
-      top: _vm.leftY ? (_vm.leftY + "px") : '-45px',
-      width: ("calc(1200px * " + (_vm.scale || 1) + ")"),
-      height: ("calc(700px * " + (_vm.scale || 1) + ")"),
-    }),attrs:{"src":_vm.leftImage,"alt":"null"}})]),_vm._v(" "),_c('div',{staticClass:"right-image",style:({
+      position: 'relative',
+      left: _vm.leftX ? (_vm.leftX + "px") : '0px',
+      top: _vm.leftY ? (_vm.leftY + "px") : '0px',
+      width: ("calc(" + _vm.leftImageWidth + "px * " + (_vm.scale || 1) + ")"),
+      height: ("calc(" + _vm.rightImageHeight + "px * " + (_vm.scale || 1) + ")"),
+    }),attrs:{"src":_vm.leftImage,"alt":"null"},on:{"~load":function($event){return _vm.setLeftImageHeight($event)}}})]),_vm._v(" "),_c('div',{staticClass:"right-image",style:({
     position: 'absolute',
     zIndex: '0',
-    width: '450px',
-    height: '700px',
-    overflow: 'hidden',
     top: '0px',
     right: '0px',
   })},[_c('img',{style:({
       position: 'relative',
-      width: ("calc(1200px * " + (_vm.scale || 1) + ")"),
-      height: ("calc(700px * " + (_vm.scale || 1) + ")"),
-      top: _vm.rightY ? (_vm.rightY + "px") : '-170px',
+      width: ("calc(" + _vm.rightImageWidth + "px * " + (_vm.scale || 1) + ")"),
+      height: ("calc(" + _vm.rightImageHeight + "px * " + (_vm.scale || 1) + ")"),
+      top: _vm.rightY ? (_vm.rightY + "px") : '0px',
       right: _vm.rightX ? (_vm.rightX + "px") : '0px',
-    }),attrs:{"src":_vm.rightImage,"alt":"null"}})])])};
+    }),attrs:{"src":_vm.rightImage,"alt":"null"},on:{"~load":function($event){return _vm.setRightImageHeight($event)}}})])])};
 var __vue_staticRenderFns__ = [];
 
   /* style */
   const __vue_inject_styles__ = function (inject) {
     if (!inject) return
-    inject("data-v-1ec7cd83_0", { source: "\n.left-image[data-v-1ec7cd83],.right-image[data-v-1ec7cd83]{pointer-events:none\n}\n@media (max-width:1250px) and (min-width:1101px){\n.left-image[data-v-1ec7cd83]{left:calc(100vw - 1265px)!important\n}\n.right-image[data-v-1ec7cd83]{width:calc(-780px + 100vw)!important\n}\n}\n@media (max-width:1100px) and (min-width:626px){\n.left-image[data-v-1ec7cd83]{left:-155px!important\n}\n.right-image[data-v-1ec7cd83]{width:326px!important\n}\n}\n@media (max-width:625px){\n.left-image[data-v-1ec7cd83]{left:-270px!important\n}\n.right-image[data-v-1ec7cd83]{width:215px!important\n}\n}", map: undefined, media: undefined });
+    inject("data-v-75471cf2_0", { source: "\n.left-image[data-v-75471cf2],.right-image[data-v-75471cf2]{pointer-events:none\n}\n@media (max-width:1250px) and (min-width:1101px){\n.left-image[data-v-75471cf2]{left:-70px!important\n}\n.right-image[data-v-75471cf2]{right:-70px!important\n}\n}\n@media (max-width:1100px) and (min-width:626px){\n.left-image[data-v-75471cf2]{left:-155px!important\n}\n.right-image[data-v-75471cf2]{right:-155px!important\n}\n}\n@media (max-width:625px){\n.left-image[data-v-75471cf2]{left:-270px!important\n}\n.right-image[data-v-75471cf2]{right:-270px!important\n}\n}", map: undefined, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__ = "data-v-1ec7cd83";
+  const __vue_scope_id__ = "data-v-75471cf2";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */

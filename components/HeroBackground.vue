@@ -3,31 +3,28 @@
     <div class="left-image" :style="{
       position: 'absolute',
       zIndex: '0',
-      left: '-30px',
+      left: '0px',
       top: '0px',
     }">
-      <img :src="leftImage" :style="{
-        position: 'absolute',
-        left: leftX ? `${leftX}px` : '-750px',
-        top: leftY ? `${leftY}px` : '-45px',
-        width: `calc(1200px * ${scale || 1})`,
-        height: `calc(700px * ${scale || 1})`,
+      <img :src="leftImage" @load.once="setLeftImageHeight" :style="{
+        position: 'relative',
+        left: leftX ? `${leftX}px` : '0px',
+        top: leftY ? `${leftY}px` : '0px',
+        width: `calc(${leftImageWidth}px * ${scale || 1})`,
+        height: `calc(${rightImageHeight}px * ${scale || 1})`,
       }" alt="null"/>
     </div>
     <div class="right-image" :style="{
       position: 'absolute',
       zIndex: '0',
-      width: '450px',
-      height: '700px',
-      overflow: 'hidden',
       top: '0px',
       right: '0px',
     }">
-      <img :src="rightImage" :style="{
+      <img :src="rightImage" @load.once="setRightImageHeight" :style="{
         position: 'relative',
-        width: `calc(1200px * ${scale || 1})`,
-        height: `calc(700px * ${scale || 1})`,
-        top: rightY ? `${rightY}px` : '-170px',
+        width: `calc(${rightImageWidth}px * ${scale || 1})`,
+        height: `calc(${rightImageHeight}px * ${scale || 1})`,
+        top: rightY ? `${rightY}px` : '0px',
         right: rightX ? `${rightX}px` : '0px',
       }" alt="null"/>
     </div>
@@ -37,6 +34,26 @@
 <script>
 export default {
   props: ['leftImage', 'rightImage', 'leftX', 'leftY', 'rightX', 'rightY', 'scale'],
+  data() {
+    return {
+      rightImageHeight: 700,
+      rightImageWidth: 1200,
+      leftImageHeight: 700,
+      leftImageWidth: 1200,
+    };
+  },
+  methods: {
+    setRightImageHeight(event) {
+      const image = event.target;
+      this.rightImageHeight = image.naturalHeight;
+      this.rightImageWidth = image.naturalWidth;
+    },
+    setLeftImageHeight(event) {
+      const image = event.target;
+      this.leftImageHeight = image.naturalHeight;
+      this.leftImageWidth = image.naturalWidth;
+    },
+  },
 }
 </script>
 
@@ -47,10 +64,10 @@ export default {
 
 @media (max-width: 1250px) and (min-width: 1101px) {
   .left-image {
-    left: calc(100vw - 1265px) !important;
+    left: -70px !important;
   }
   .right-image {
-    width: calc(-780px + 100vw) !important;
+    right: -70px !important;
   }
 }
 
@@ -60,7 +77,7 @@ export default {
   }
 
   .right-image {
-    width: 326px !important;
+    right: -155px !important;
   }
 }
 
@@ -69,7 +86,7 @@ export default {
     left: -270px !important;
   }
   .right-image {
-    width: 215px !important;
+    right: -270px !important;
   }
 }
 </style>

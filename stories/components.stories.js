@@ -1,6 +1,7 @@
 import Vue from 'vue';
 
 import { storiesOf } from '@storybook/vue';
+import { withKnobs, number } from '@storybook/addon-knobs/vue';
 
 import headerLeft from '../assets/images/home_header_left.svg';
 import headerRight from '../assets/images/home_header_right.svg';
@@ -50,15 +51,16 @@ storiesOf('Asyncy Components/Footer', module)
   }));
 
 storiesOf('Header background', module)
+  .addDecorator(withKnobs)
   .add('Header background', () => ({
     components: { HeroBackground },
     template: `<hero-background
       left-image="${headerLeft}"
       right-image="${headerRight}"
-      :scale="0.6"
-      :left-x="-320"
-      :left-y="1"
-      :right-x="-85"
-      :right-y="1"
+      :scale="${number('Scale', 3, { step: 0.1 })}"
+      :left-x="${number('Left X Position', -300)}"
+      :left-y="${number('Left Y Position', 0)}"
+      :right-x="${number('Right X Position', -300)}"
+      :right-y="${number('Right Y Position', 0)}"
     />`
   }));
