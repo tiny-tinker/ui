@@ -31,11 +31,14 @@
     "vue-template-compiler": "^2.5.16"
   },
   "scripts": {
-    "build": "NODE_ENV=production ./node_modules/.bin/rollup --config build/rollup.config.js",
-    "watch": "NODE_ENV=production ./node_modules/.bin/rollup --config build/rollup.config.js -w",
-    "dev": "run-p storybook watch",
+    "dev": "run-p storybook watch css-watch",
+	"build": "run-p js-build css-build",
+    "js-build": "NODE_ENV=production ./node_modules/.bin/rollup --config build/rollup.config.js",
+    "js-watch": "NODE_ENV=production ./node_modules/.bin/rollup --config build/rollup.config.js -w",
+	"css-build": "stylus assets/styles/global.styl --include-css -r -c --out dist/css/",
+	"css-watch": "stylus assets/styles/global.styl --include-css -r -c -w --out dist/css/",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o dist/"
+    "storybook-build": "build-storybook -c .storybook -o site/"
   },
   "repository": {
     "type": "git",
