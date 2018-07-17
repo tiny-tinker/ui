@@ -6,11 +6,10 @@
       left: '0px',
       top: '0px',
     }">
-      <img :src="leftImage" @load.once="setLeftImageHeight" :style="{
+      <img :src="leftImage" :style="{
         position: 'relative',
         left: leftX ? `${leftX}px` : '0px',
         top: leftY ? `${leftY}px` : '0px',
-        width: `calc(${leftImageWidth}px * ${scale || 1})`,
         height: `calc(${rightImageHeight}px * ${scale || 1})`,
       }" alt="null"/>
     </div>
@@ -20,9 +19,8 @@
       top: '0px',
       right: '0px',
     }">
-      <img :src="rightImage" @load.once="setRightImageHeight" :style="{
+      <img :src="rightImage" :style="{
         position: 'relative',
-        width: `calc(${rightImageWidth}px * ${scale || 1})`,
         height: `calc(${rightImageHeight}px * ${scale || 1})`,
         top: rightY ? `${rightY}px` : '0px',
         right: rightX ? `${rightX}px` : '0px',
@@ -36,23 +34,9 @@ export default {
   props: ['leftImage', 'rightImage', 'leftX', 'leftY', 'rightX', 'rightY', 'scale'],
   data() {
     return {
-      rightImageHeight: 700,
-      rightImageWidth: 1200,
-      leftImageHeight: 700,
-      leftImageWidth: 1200,
+      rightImageHeight: 150,
+      leftImageHeight: 150,
     };
-  },
-  methods: {
-    setRightImageHeight(event) {
-      const image = event.target;
-      this.rightImageHeight = image.naturalHeight;
-      this.rightImageWidth = image.naturalWidth;
-    },
-    setLeftImageHeight(event) {
-      const image = event.target;
-      this.leftImageHeight = image.naturalHeight;
-      this.leftImageWidth = image.naturalWidth;
-    },
   },
 }
 </script>

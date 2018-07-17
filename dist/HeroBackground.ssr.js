@@ -29,30 +29,14 @@
 //
 //
 //
-//
-//
 
 var script = {
   props: ['leftImage', 'rightImage', 'leftX', 'leftY', 'rightX', 'rightY', 'scale'],
   data() {
     return {
-      rightImageHeight: 700,
-      rightImageWidth: 1200,
-      leftImageHeight: 700,
-      leftImageWidth: 1200,
+      rightImageHeight: 150,
+      leftImageHeight: 150,
     };
-  },
-  methods: {
-    setRightImageHeight(event) {
-      const image = event.target;
-      this.rightImageHeight = image.naturalHeight;
-      this.rightImageWidth = image.naturalWidth;
-    },
-    setLeftImageHeight(event) {
-      const image = event.target;
-      this.leftImageHeight = image.naturalHeight;
-      this.leftImageWidth = image.naturalWidth;
-    },
   },
 };
 
@@ -69,7 +53,6 @@ var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=
       position: 'relative',
       left: _vm.leftX ? (_vm.leftX + "px") : '0px',
       top: _vm.leftY ? (_vm.leftY + "px") : '0px',
-      width: ("calc(" + _vm.leftImageWidth + "px * " + (_vm.scale || 1) + ")"),
       height: ("calc(" + _vm.rightImageHeight + "px * " + (_vm.scale || 1) + ")"),
     }, null))+"></div> <div class=\"right-image\""+(_vm._ssrStyle(null,{
     position: 'absolute',
@@ -78,7 +61,6 @@ var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=
     right: '0px',
   }, null))+"><img"+(_vm._ssrAttr("src",_vm.rightImage))+" alt=\"null\""+(_vm._ssrStyle(null,{
       position: 'relative',
-      width: ("calc(" + _vm.rightImageWidth + "px * " + (_vm.scale || 1) + ")"),
       height: ("calc(" + _vm.rightImageHeight + "px * " + (_vm.scale || 1) + ")"),
       top: _vm.rightY ? (_vm.rightY + "px") : '0px',
       right: _vm.rightX ? (_vm.rightX + "px") : '0px',
@@ -88,13 +70,13 @@ var __vue_staticRenderFns__ = [];
   /* style */
   const __vue_inject_styles__ = function (inject) {
     if (!inject) return
-    inject("data-v-75471cf2_0", { source: "\n.left-image[data-v-75471cf2],.right-image[data-v-75471cf2]{pointer-events:none\n}\n@media (max-width:1250px) and (min-width:1101px){\n.left-image[data-v-75471cf2]{left:-70px!important\n}\n.right-image[data-v-75471cf2]{right:-70px!important\n}\n}\n@media (max-width:1100px) and (min-width:626px){\n.left-image[data-v-75471cf2]{left:-155px!important\n}\n.right-image[data-v-75471cf2]{right:-155px!important\n}\n}\n@media (max-width:625px){\n.left-image[data-v-75471cf2]{left:-270px!important\n}\n.right-image[data-v-75471cf2]{right:-270px!important\n}\n}", map: undefined, media: undefined });
+    inject("data-v-984b0c5a_0", { source: "\n.left-image[data-v-984b0c5a],.right-image[data-v-984b0c5a]{pointer-events:none\n}\n@media (max-width:1250px) and (min-width:1101px){\n.left-image[data-v-984b0c5a]{left:-70px!important\n}\n.right-image[data-v-984b0c5a]{right:-70px!important\n}\n}\n@media (max-width:1100px) and (min-width:626px){\n.left-image[data-v-984b0c5a]{left:-155px!important\n}\n.right-image[data-v-984b0c5a]{right:-155px!important\n}\n}\n@media (max-width:625px){\n.left-image[data-v-984b0c5a]{left:-270px!important\n}\n.right-image[data-v-984b0c5a]{right:-270px!important\n}\n}", map: undefined, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__ = "data-v-75471cf2";
+  const __vue_scope_id__ = "data-v-984b0c5a";
   /* module identifier */
-  const __vue_module_identifier__ = "data-v-75471cf2";
+  const __vue_module_identifier__ = "data-v-984b0c5a";
   /* functional template */
   const __vue_is_functional_template__ = false;
   /* component normalizer */

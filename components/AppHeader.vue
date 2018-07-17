@@ -19,8 +19,8 @@
 
       <div class="column is-hidden-touch" />
 
-      <div class="column is-hidden-touch is-narrow align-center">
-        <nav>
+      <div class="column is-hidden-touch align-center links-column">
+        <nav class="nav">
           <ul class="links">
             <li v-for="(link, index) in headerLinks" class="web-header-link" :key="index">
               <span class="link" v-if="!link.items && !link.button">
@@ -111,10 +111,7 @@ export default {
 </script>
 
 <style scoped lang="styl">
-.app-header {
-  font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizelegibility;
+.app-header
   background: #111;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -122,19 +119,17 @@ export default {
   display: flex;
   align-items: center;
 
-  .app-header-columns {
+  .app-header-columns
     flex-grow: 1;
     margin: 0 auto;
     max-width: 1440px;
     padding: 0 25px;
-  }
-}
+    overflow: scroll;
 
-.logo-container {
+.logo-container
   margin: 0;
-}
 
-.mobile-menu {
+.mobile-menu
   position: fixed;
   background: #111;
   text-align: right;
@@ -144,58 +139,57 @@ export default {
   top: 0;
   padding: 23px;
   z-index: 3000;
-}
 
-.hamburger-container {
+.hamburger-container
   justify-content: flex-end;
   margin-left: 30px;
 
-  .mobile-menu-icon-hamburger {
+  .mobile-menu-icon-hamburger
     font-size: 32px;
     line-height: 20px;
     text-align: right;
     vertical-align: top;
-  }
-}
 
-.mobile-menu-icon-close {
+
+.mobile-menu-icon-close
   width: 100%;
   font-size: 2em;
   padding-bottom: 25px;
-}
 
-.icon {
+.icon
   color: white;
   cursor: pointer;
-}
 
-.mobile-links {
+.mobile-links
   text-align: center;
   font-size: 1.2em;
   padding-left: 0;
-}
 
-.links {
+.links-column
+  flex auto
+
+.nav
+  width 100%
+
+.links
   text-align: right;
   font-size: 1.06em;
   margin: 0;
   padding: 0;
 
-  .web-header-link {
+  .web-header-link
     display: inline;
     margin-left: 90px;
+    white-space: nowrap;
 
-    &:first-child {
+    &:first-child
       margin-left: 0px;
-    }
-  }
 
-  .web-header-link:first-child:nth-last-child(5), .web-header-link:first-child:nth-last-child(5) ~ .web-header-link {
+  .web-header-link:first-child:nth-last-child(5), .web-header-link:first-child:nth-last-child(5) ~ .web-header-link
     margin-left: 65px;
-  }
-}
 
-.header-button {
+
+.header-button
   color: white;
   padding: 13px 22px;
   border-radius: 6px;
@@ -206,23 +200,22 @@ export default {
   transition: all 0.2s;
   font-size: 0.9em;
 
-  &:hover {
+  &:hover
     color: #111;
     background-color: white;
     border-color: #111;
-  }
-}
 
-.link {
+
+.link
   position: relative;
 
-  a {
+  a
     color: white;
     font-weight: 400;
     font-size: 0.9em;
     cursor: pointer;
-  }
-  &:before {
+
+  &:before
     content: "";
     position: absolute;
     width: 100%;
@@ -232,49 +225,42 @@ export default {
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.15s ease-out 0s;
-  }
-  &:hover:before {
+
+  &:hover:before
     visibility: visible;
     transform: scaleX(1);
-  }
-  &:hover a {
+
+  &:hover a
     color: #D1D1D1;
     transition: all 0.15s ease-in-out 0s;
-  }
-}
 
-.dropdown-header-text {
+
+.dropdown-header-text
   color: white;
   font-size: 0.9em;
-}
 
-.dropdown {
+.dropdown
   vertical-align: baseline;
-}
 
-.dropdown-menu {
+.dropdown-menu
   min-width: 130px;
-}
 
-.dropdown-item {
+.dropdown-item
   font-weight: 400;
   font-size: 0.9em;
   padding-right: 0;
   cursor: pointer;
-}
 
-.dropdown-content {
+.dropdown-content
   text-align: left;
-}
 
-.header-form {
+.header-form
   width: 100%;
-}
 
 .search-container
   margin-left 2rem
 
-.header-search-bar {
+.header-search-bar
   font-size: 1em;
   border-radius: 6px;
   border: 1px solid transparent;
@@ -284,17 +270,14 @@ export default {
   transition: all 0.2s ease-in-out;
   outline: none;
   width: 100%;
-}
 
-.header-search-bar:focus {
+.header-search-bar:focus
   border-color: #515CF9;
   filter: brightness(120%);
   color: white;
-}
 
-.align-center {
+.align-center
   padding: 0;
   display: flex;
   align-items: center;
-}
 </style>
