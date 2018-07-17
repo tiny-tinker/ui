@@ -1,10 +1,10 @@
 <template>
-  <input :class="{ input: true, [color]: color }" :placeholder="placeholder" aria-label="placeholder"/>
+  <input :class="{ input: true, [color]: color }" :placeholder="placeholder" aria-label="placeholder" :value="value" @input="$emit('input', $event.target.value)"/>
 </template>
 
 <script>
 export default {
-  props: ['color', 'placeholder'],
+  props: ['color', 'placeholder', 'value'],
 };
 </script>
 
