@@ -2,26 +2,29 @@ import vue from 'rollup-plugin-vue';
 import svg from 'rollup-plugin-svg';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import css from 'rollup-plugin-css-only';
 
-const toRollupConf = (name, isSSR) => {
+const toRollupConf = (name) => {
   const outputFile = isSSR ? `dist/${name}.ssr.js` : `dist/${name}.js`;
   return {
     input: `components/${name}.vue`,
     output: {
       format: 'esm',
-      file: outputFile,
+      file: `dist/${name}.js`,
     },
     plugins: [
       vue({
+        css: false,
         style: {
           preprocessOptions: {
             stylus: {},
           },
         },
         template: {
-          optimizeSSR: isSSR,
+          isProduction: true,
         },
       }),
+      css({ output: true }),
       svg(),
       resolve({
         customResolveOptions: {
@@ -34,11 +37,6 @@ const toRollupConf = (name, isSSR) => {
   }
 };
 
-const fromComponents = (componentNames) => {
-  return componentNames.map(name => toRollupConf(name, false))
-    .concat(componentNames.map(name => toRollupConf(name, true)));
-};
+const componentNames = ['CookiesBanner', 'AppHeader', 'AppFooter', 'HeroBackground', 'AButton', 'AInput'];
 
-const components = ['CookiesBanner', 'AppHeader', 'AppFooter', 'HeroBackground', 'AButton', 'AInput'];
-
-export default fromComponents(components);
+export default componentNames.map(name => toRollupConf(name))

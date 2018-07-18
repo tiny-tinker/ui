@@ -11,18 +11,13 @@ var script = {
 
 /* script */
             const __vue_script__ = script;
-            
 /* template */
 var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{class:( _obj = { button: true }, _obj[_vm.color] = _vm.color, _obj )},[_vm._t("default")],2)
 var _obj;};
 var __vue_staticRenderFns__ = [];
 
   /* style */
-  const __vue_inject_styles__ = function (inject) {
-    if (!inject) return
-    inject("data-v-476ed87f_0", { source: "\n.button[data-v-476ed87f]{font-family:Graphik Web,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif;font-weight:500;color:#fff;padding:13px 22px;border-radius:4px;cursor:pointer;background-color:#111;border:1px solid #8f8f8f;text-align:center;transition:all .2s;font-size:.9em\n}\n.button[data-v-476ed87f]:hover{color:#111;background-color:#fff;border-color:#8f8f8f\n}\n.button.white[data-v-476ed87f]{color:#111;background-color:#fff;border-color:#8f8f8f\n}\n.button.white[data-v-476ed87f]:hover{color:#fff;background-color:#111;border-color:#111\n}", map: undefined, media: undefined });
-
-  };
+  const __vue_inject_styles__ = undefined;
   /* scoped */
   const __vue_scope_id__ = "data-v-476ed87f";
   /* module identifier */
@@ -46,30 +41,6 @@ var __vue_staticRenderFns__ = [];
     }
 
     component._scopeId = scope;
-
-    {
-      let hook;
-      if (style) {
-        hook = function(context) {
-          style.call(this, createInjector(context));
-        };
-      }
-
-      if (hook !== undefined) {
-        if (component.functional) {
-          // register for functional component in vue file
-          const originalRender = component.render;
-          component.render = function renderWithStyleInjection(h, context) {
-            hook.call(context);
-            return originalRender(h, context)
-          };
-        } else {
-          // inject component registration as beforeCreate hook
-          const existing = component.beforeCreate;
-          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
-        }
-      }
-    }
 
     return component
   }

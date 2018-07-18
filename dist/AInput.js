@@ -9,18 +9,13 @@ var script = {
 
 /* script */
             const __vue_script__ = script;
-            
 /* template */
 var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('input',{class:( _obj = { input: true }, _obj[_vm.color] = _vm.color, _obj ),attrs:{"placeholder":_vm.placeholder,"aria-label":"placeholder"},domProps:{"value":_vm.value},on:{"input":function($event){_vm.$emit('input', $event.target.value);}}})
 var _obj;};
 var __vue_staticRenderFns__ = [];
 
   /* style */
-  const __vue_inject_styles__ = function (inject) {
-    if (!inject) return
-    inject("data-v-2aaab76f_0", { source: "\n.input[data-v-2aaab76f]{font-size:1em;border-radius:6px;border:1px solid #ccc;padding:15px 20px;margin-bottom:10px;background-color:#232323;color:#bebebe;transition:all .2s ease-in-out;outline:0\n}\n.input.white[data-v-2aaab76f]{border:1px solid #c7c7c7;padding:15px 20px;margin-bottom:10px;background-color:#fbfbfb;box-shadow:0 1px 2px 0 rgba(208,208,208,.5)\n}\n.input[data-v-2aaab76f]:focus{border-color:#515cf9;filter:brightness(120%);color:#fff\n}\n.input:focus.white[data-v-2aaab76f]{color:#000\n}\n.input[data-v-2aaab76f]:invalid{border-color:#f74545;color:#f74545\n}", map: undefined, media: undefined });
-
-  };
+  const __vue_inject_styles__ = undefined;
   /* scoped */
   const __vue_scope_id__ = "data-v-2aaab76f";
   /* module identifier */
@@ -44,30 +39,6 @@ var __vue_staticRenderFns__ = [];
     }
 
     component._scopeId = scope;
-
-    {
-      let hook;
-      if (style) {
-        hook = function(context) {
-          style.call(this, createInjector(context));
-        };
-      }
-
-      if (hook !== undefined) {
-        if (component.functional) {
-          // register for functional component in vue file
-          const originalRender = component.render;
-          component.render = function renderWithStyleInjection(h, context) {
-            hook.call(context);
-            return originalRender(h, context)
-          };
-        } else {
-          // inject component registration as beforeCreate hook
-          const existing = component.beforeCreate;
-          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
-        }
-      }
-    }
 
     return component
   }

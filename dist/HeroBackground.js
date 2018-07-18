@@ -42,7 +42,6 @@ var script = {
 
 /* script */
             const __vue_script__ = script;
-            
 /* template */
 var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"left-image",style:({
     position: 'absolute',
@@ -68,11 +67,7 @@ var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=
 var __vue_staticRenderFns__ = [];
 
   /* style */
-  const __vue_inject_styles__ = function (inject) {
-    if (!inject) return
-    inject("data-v-984b0c5a_0", { source: "\n.left-image[data-v-984b0c5a],.right-image[data-v-984b0c5a]{pointer-events:none\n}\n@media (max-width:1250px) and (min-width:1101px){\n.left-image[data-v-984b0c5a]{left:-70px!important\n}\n.right-image[data-v-984b0c5a]{right:-70px!important\n}\n}\n@media (max-width:1100px) and (min-width:626px){\n.left-image[data-v-984b0c5a]{left:-155px!important\n}\n.right-image[data-v-984b0c5a]{right:-155px!important\n}\n}\n@media (max-width:625px){\n.left-image[data-v-984b0c5a]{left:-270px!important\n}\n.right-image[data-v-984b0c5a]{right:-270px!important\n}\n}", map: undefined, media: undefined });
-
-  };
+  const __vue_inject_styles__ = undefined;
   /* scoped */
   const __vue_scope_id__ = "data-v-984b0c5a";
   /* module identifier */
@@ -96,30 +91,6 @@ var __vue_staticRenderFns__ = [];
     }
 
     component._scopeId = scope;
-
-    {
-      let hook;
-      if (style) {
-        hook = function(context) {
-          style.call(this, createInjector(context));
-        };
-      }
-
-      if (hook !== undefined) {
-        if (component.functional) {
-          // register for functional component in vue file
-          const originalRender = component.render;
-          component.render = function renderWithStyleInjection(h, context) {
-            hook.call(context);
-            return originalRender(h, context)
-          };
-        } else {
-          // inject component registration as beforeCreate hook
-          const existing = component.beforeCreate;
-          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
-        }
-      }
-    }
 
     return component
   }

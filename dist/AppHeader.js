@@ -22,17 +22,12 @@ var script = {
 
 /* script */
             const __vue_script__ = script;
-            
 /* template */
 var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"dropdown-container"},[_c('div',{staticClass:"dropdown-trigger"},[_vm._t("default")],2),_vm._v(" "),_c('div',{staticClass:"dropdown-menu"},[_c('div',{staticClass:"dropdown-content"},_vm._l((_vm.items),function(item){return _c('div',{key:item.text,staticClass:"dropdown-item"},[(_vm.linkComponent)?_c(_vm.linkComponent,{tag:"component",attrs:{"to":item.to}},[_vm._v(_vm._s(item.text))]):_c('a',{attrs:{"href":item.to}},[_vm._v(_vm._s(item.text))])],1)}))])])};
 var __vue_staticRenderFns__ = [];
 
   /* style */
-  const __vue_inject_styles__ = function (inject) {
-    if (!inject) return
-    inject("data-v-2b3386e8_0", { source: "\n.dropdown-container[data-v-2b3386e8]{display:inline-block;position:relative\n}\n.dropdown-container:hover .dropdown-menu[data-v-2b3386e8]{display:block\n}\n.dropdown-menu[data-v-2b3386e8]{display:none;position:absolute;top:100%;z-index:20;right:0;padding-top:14px\n}\n.dropdown-content[data-v-2b3386e8]{padding:.5rem 0;border-radius:4px;background:#363636\n}\n.dropdown-item[data-v-2b3386e8]{font-size:.9rem;padding:.375rem 1rem;line-height:1.5;padding-right:3rem;text-align:left;white-space:nowrap\n}\n.dropdown-item a[data-v-2b3386e8]{color:#fff\n}\n.dropdown-item a[data-v-2b3386e8]:hover{color:#d1d1d1\n}", map: undefined, media: undefined });
-
-  };
+  const __vue_inject_styles__ = undefined;
   /* scoped */
   const __vue_scope_id__ = "data-v-2b3386e8";
   /* module identifier */
@@ -56,30 +51,6 @@ var __vue_staticRenderFns__ = [];
     }
 
     component._scopeId = scope;
-
-    {
-      let hook;
-      if (style) {
-        hook = function(context) {
-          style.call(this, createInjector(context));
-        };
-      }
-
-      if (hook !== undefined) {
-        if (component.functional) {
-          // register for functional component in vue file
-          const originalRender = component.render;
-          component.render = function renderWithStyleInjection(h, context) {
-            hook.call(context);
-            return originalRender(h, context)
-          };
-        } else {
-          // inject component registration as beforeCreate hook
-          const existing = component.beforeCreate;
-          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
-        }
-      }
-    }
 
     return component
   }
@@ -206,7 +177,6 @@ var script$1 = {
 
 /* script */
             const __vue_script__$1 = script$1;
-            
 /* template */
 var __vue_render__$1 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app-header"},[_c('div',{staticClass:"columns app-header-columns is-mobile"},[_c('div',{staticClass:"column logo-container align-center is-narrow"},[_c(_vm.linkComponent,{tag:"component",attrs:{"to":"/"}},[_c('img',{style:({
           margin: '6px 0 0 0'
@@ -218,11 +188,7 @@ var __vue_render__$1 = function () {var _vm=this;var _h=_vm.$createElement;var _
 var __vue_staticRenderFns__$1 = [];
 
   /* style */
-  const __vue_inject_styles__$1 = function (inject) {
-    if (!inject) return
-    inject("data-v-028c3d01_0", { source: "\n.app-header[data-v-028c3d01]{background:#111;padding-top:10px;padding-bottom:10px;min-height:66px;display:flex;align-items:center\n}\n.app-header .app-header-columns[data-v-028c3d01]{flex-grow:1;margin:0 auto;max-width:1440px;padding:0 25px;overflow:scroll\n}\n.logo-container[data-v-028c3d01]{margin:0\n}\n.mobile-menu[data-v-028c3d01]{position:fixed;background:#111;text-align:right;width:100vw;height:100vh;left:0;top:0;padding:23px;z-index:3000\n}\n.hamburger-container[data-v-028c3d01]{justify-content:flex-end;margin-left:30px\n}\n.hamburger-container .mobile-menu-icon-hamburger[data-v-028c3d01]{font-size:32px;line-height:20px;text-align:right;vertical-align:top\n}\n.mobile-menu-icon-close[data-v-028c3d01]{width:100%;font-size:2em;padding-bottom:25px\n}\n.icon[data-v-028c3d01]{color:#fff;cursor:pointer\n}\n.mobile-links[data-v-028c3d01]{text-align:center;font-size:1.2em;padding-left:0\n}\n.links-column[data-v-028c3d01]{flex:auto\n}\n.nav[data-v-028c3d01]{width:100%\n}\n.links[data-v-028c3d01]{text-align:right;font-size:1.06em;margin:0;padding:0\n}\n.links .web-header-link[data-v-028c3d01]{display:inline;margin-left:90px;white-space:nowrap\n}\n.links .web-header-link[data-v-028c3d01]:first-child{margin-left:0\n}\n.links .web-header-link[data-v-028c3d01]:first-child:nth-last-child(5),.links .web-header-link:first-child:nth-last-child(5)~.web-header-link[data-v-028c3d01]{margin-left:65px\n}\n.header-button[data-v-028c3d01]{color:#fff;padding:13px 22px;border-radius:6px;cursor:pointer;background-color:#111;border:1px solid #8f8f8f;text-align:center;transition:all .2s;font-size:.9em\n}\n.header-button[data-v-028c3d01]:hover{color:#111;background-color:#fff;border-color:#111\n}\n.link[data-v-028c3d01]{position:relative\n}\n.link a[data-v-028c3d01]{color:#fff;font-weight:400;font-size:.9em;cursor:pointer\n}\n.link[data-v-028c3d01]:before{content:\"\";position:absolute;width:100%;height:2px;bottom:-9px;background-color:#888;visibility:hidden;transform:scaleX(0);transition:all .15s ease-out 0s\n}\n.link[data-v-028c3d01]:hover:before{visibility:visible;transform:scaleX(1)\n}\n.link:hover a[data-v-028c3d01]{color:#d1d1d1;transition:all .15s ease-in-out 0s\n}\n.dropdown-header-text[data-v-028c3d01]{color:#fff;font-size:.9em\n}\n.dropdown[data-v-028c3d01]{vertical-align:baseline\n}\n.dropdown-menu[data-v-028c3d01]{min-width:130px\n}\n.dropdown-item[data-v-028c3d01]{font-weight:400;font-size:.9em;padding-right:0;cursor:pointer\n}\n.dropdown-content[data-v-028c3d01]{text-align:left\n}\n.header-form[data-v-028c3d01]{width:100%\n}\n.search-container[data-v-028c3d01]{margin-left:2rem\n}\n.header-search-bar[data-v-028c3d01]{font-size:1em;border-radius:6px;border:1px solid transparent;padding:12px 20px;background-color:#232323;color:#bebebe;transition:all .2s ease-in-out;outline:0;width:100%\n}\n.header-search-bar[data-v-028c3d01]:focus{border-color:#515cf9;filter:brightness(120%);color:#fff\n}\n.align-center[data-v-028c3d01]{padding:0;display:flex;align-items:center\n}", map: undefined, media: undefined });
-
-  };
+  const __vue_inject_styles__$1 = undefined;
   /* scoped */
   const __vue_scope_id__$1 = "data-v-028c3d01";
   /* module identifier */
@@ -246,30 +212,6 @@ var __vue_staticRenderFns__$1 = [];
     }
 
     component._scopeId = scope;
-
-    {
-      let hook;
-      if (style) {
-        hook = function(context) {
-          style.call(this, createInjector(context));
-        };
-      }
-
-      if (hook !== undefined) {
-        if (component.functional) {
-          // register for functional component in vue file
-          const originalRender = component.render;
-          component.render = function renderWithStyleInjection(h, context) {
-            hook.call(context);
-            return originalRender(h, context)
-          };
-        } else {
-          // inject component registration as beforeCreate hook
-          const existing = component.beforeCreate;
-          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
-        }
-      }
-    }
 
     return component
   }

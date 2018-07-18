@@ -92,8 +92,7 @@ export default {
 </script>
 
 <style scoped lang="styl">
-.cookies-banner {
-  font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+.cookies-banner
   background-color: #111;
   color: white;
   padding: 25px;
@@ -104,23 +103,20 @@ export default {
   bottom: 0;
   opacity: 0.9;
   pointer-events: none;
-}
 
-.side1 {
+.side1
   line-height: 1.8em;
   display: inline-block;
   width: 70%;
   flex-grow: 1;
-}
 
-.side2 {
+.side2
   flex-grow: 1;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-}
 
-.cookie-button {
+.cookie-button
   color: white;
   background-color: #515cf9;
   font-size: 1.1em;
@@ -130,27 +126,21 @@ export default {
   transition: all 0.2s;
   pointer-events: auto;
   opacity: 1;
-}
 
-.cookie-button:hover {
+.cookie-button:hover
   filter: brightness(125%);
-}
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active, .fade-leave-active
   transition: opacity .5s;
-}
 
-.fade-enter, .fade-leave-to {
+.fade-enter, .fade-leave-to
   opacity: 0;
-}
 
-.revoke-banner {
+.revoke-banner
   text-align: center;
-  font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   background-color: #111;
   font-size: 0.8em;
   color: #666;
   width:100%;
   padding: 25px;
-}
 </style>
