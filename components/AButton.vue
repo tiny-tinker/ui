@@ -23,6 +23,7 @@ export default {
   border: 1px solid #8F8F8F;
   text-align: center;
   transition: all 0.2s;
+  font-size: 0.9rem;
 
   &:hover {
     color: #111;
