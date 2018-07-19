@@ -5,7 +5,6 @@ import commonjs from 'rollup-plugin-commonjs';
 import css from 'rollup-plugin-css-only';
 
 const toRollupConf = (name) => {
-  const outputFile = isSSR ? `dist/${name}.ssr.js` : `dist/${name}.js`;
   return {
     input: `components/${name}.vue`,
     output: {
@@ -13,6 +12,7 @@ const toRollupConf = (name) => {
       file: `dist/${name}.js`,
     },
     plugins: [
+      css({ output: `dist/${name}.css` }),
       vue({
         css: false,
         style: {
@@ -24,7 +24,6 @@ const toRollupConf = (name) => {
           isProduction: true,
         },
       }),
-      css({ output: true }),
       svg(),
       resolve({
         customResolveOptions: {
