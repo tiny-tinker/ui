@@ -51,6 +51,8 @@ export default {
 
   a
     color white
+    text-decoration none
+
     &:hover
       color #D1D1D1
 
