@@ -31,7 +31,7 @@
 //
 
 var script = {
-  props: ['leftImage', 'rightImage', 'leftX', 'leftY', 'rightX', 'rightY', 'scale'],
+  props: ['leftImage', 'rightImage', 'leftX', 'leftY', 'rightX', 'rightY', 'scale', 'scaleLeft', 'scaleRight'],
   data() {
     return {
       rightImageHeight: 150,
@@ -52,7 +52,7 @@ var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=
       position: 'relative',
       left: _vm.leftX ? (_vm.leftX + "px") : '0px',
       top: _vm.leftY ? (_vm.leftY + "px") : '0px',
-      height: ("calc(" + _vm.rightImageHeight + "px * " + (_vm.scale || 1) + ")"),
+      height: ("calc(" + _vm.rightImageHeight + "px * " + (_vm.scaleLeft || _vm.scale || 1) + ")"),
     }),attrs:{"src":_vm.leftImage,"alt":"null"}})]),_vm._v(" "),_c('div',{staticClass:"right-image",style:({
     position: 'absolute',
     zIndex: '0',
@@ -60,7 +60,7 @@ var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=
     right: '0px',
   })},[_c('img',{style:({
       position: 'relative',
-      height: ("calc(" + _vm.rightImageHeight + "px * " + (_vm.scale || 1) + ")"),
+      height: ("calc(" + _vm.rightImageHeight + "px * " + (_vm.scaleRight || _vm.scale || 1) + ")"),
       top: _vm.rightY ? (_vm.rightY + "px") : '0px',
       right: _vm.rightX ? (_vm.rightX + "px") : '0px',
     }),attrs:{"src":_vm.rightImage,"alt":"null"}})])])};
@@ -69,7 +69,7 @@ var __vue_staticRenderFns__ = [];
   /* style */
   const __vue_inject_styles__ = undefined;
   /* scoped */
-  const __vue_scope_id__ = "data-v-984b0c5a";
+  const __vue_scope_id__ = "data-v-0b3c58d6";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */

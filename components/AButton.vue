@@ -16,14 +16,13 @@ export default {
 
   font-weight: 500;
   color: white;
-  padding: 13px 22px;
-  border-radius: 4px;
+  padding: 15px 28px;
+  border-radius: 6px;
   cursor: pointer;
   background-color: #111;
   border: 1px solid #8F8F8F;
   text-align: center;
   transition: all 0.2s;
-  font-size: 0.9em;
 
   &:hover {
     color: #111;

@@ -10,7 +10,7 @@
         position: 'relative',
         left: leftX ? `${leftX}px` : '0px',
         top: leftY ? `${leftY}px` : '0px',
-        height: `calc(${rightImageHeight}px * ${scale || 1})`,
+        height: `calc(${rightImageHeight}px * ${scaleLeft || scale || 1})`,
       }" alt="null"/>
     </div>
     <div class="right-image" :style="{
@@ -21,7 +21,7 @@
     }">
       <img :src="rightImage" :style="{
         position: 'relative',
-        height: `calc(${rightImageHeight}px * ${scale || 1})`,
+        height: `calc(${rightImageHeight}px * ${scaleRight || scale || 1})`,
         top: rightY ? `${rightY}px` : '0px',
         right: rightX ? `${rightX}px` : '0px',
       }" alt="null"/>
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  props: ['leftImage', 'rightImage', 'leftX', 'leftY', 'rightX', 'rightY', 'scale'],
+  props: ['leftImage', 'rightImage', 'leftX', 'leftY', 'rightX', 'rightY', 'scale', 'scaleLeft', 'scaleRight'],
   data() {
     return {
       rightImageHeight: 150,
