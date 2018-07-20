@@ -10,14 +10,14 @@ var script = {
 /* script */
             const __vue_script__ = script;
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('input',{class:( _obj = { input: true }, _obj[_vm.color] = _vm.color, _obj ),attrs:{"placeholder":_vm.placeholder,"aria-label":"placeholder"},domProps:{"value":_vm.value},on:{"input":function($event){_vm.$emit('input', $event.target.value);}}})
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('input',_vm._b({class:( _obj = { input: true }, _obj[_vm.color] = _vm.color, _obj ),attrs:{"placeholder":_vm.placeholder,"aria-label":_vm.placeholder},domProps:{"value":_vm.value},on:{"input":function($event){_vm.$emit('input', $event.target.value);}}},'input',_vm.props,false))
 var _obj;};
 var __vue_staticRenderFns__ = [];
 
   /* style */
   const __vue_inject_styles__ = undefined;
   /* scoped */
-  const __vue_scope_id__ = "data-v-32109116";
+  const __vue_scope_id__ = "data-v-f18df968";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */

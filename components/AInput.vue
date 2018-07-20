@@ -1,5 +1,5 @@
 <template>
-  <input :class="{ input: true, [color]: color }" :placeholder="placeholder" aria-label="placeholder" :value="value" @input="$emit('input', $event.target.value)"/>
+  <input :class="{ input: true, [color]: color }" :placeholder="placeholder" :aria-label="placeholder" :value="value" @input="$emit('input', $event.target.value)"/>
 </template>
 
 <script>

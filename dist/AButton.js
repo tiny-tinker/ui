@@ -12,14 +12,14 @@ var script = {
 /* script */
             const __vue_script__ = script;
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{class:( _obj = { button: true }, _obj[_vm.color] = _vm.color, _obj )},[_vm._t("default")],2)
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',_vm._b({class:( _obj = { button: true }, _obj[_vm.color] = _vm.color, _obj )},'button',_vm.props,false),[_vm._t("default")],2)
 var _obj;};
 var __vue_staticRenderFns__ = [];
 
   /* style */
   const __vue_inject_styles__ = undefined;
   /* scoped */
-  const __vue_scope_id__ = "data-v-8cebf316";
+  const __vue_scope_id__ = "data-v-7ff882c2";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */

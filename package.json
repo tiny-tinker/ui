@@ -1,6 +1,6 @@
 {
   "name": "asyncy-ui-components",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Shared components for Asyncy",
   "main": "index.js",
   "dependencies": {
