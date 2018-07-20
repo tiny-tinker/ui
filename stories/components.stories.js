@@ -7,6 +7,7 @@ import headerLeft from '../assets/images/home_header_left.svg';
 import headerRight from '../assets/images/home_header_right.svg';
 
 import CookiesBanner from '../components/CookiesBanner.vue';
+import AButton from '../components/AButton.vue';
 import AppFooter from '../components/AppFooter.vue';
 import AppHeader from '../components/AppHeader.vue';
 import HeroBackground from '../components/HeroBackground.vue';
@@ -34,14 +35,13 @@ storiesOf('Asyncy Components/Header', module)
       }]"/></div>`
   }))
   .add('Header with search bar and button', () => ({
-    components: { AppHeader },
+    components: { AppHeader, AButton },
     template: `<div><app-header link-component="a" :show-search="true" :links="[
       { text: 'Explore', to: '/' },
       { text: 'About Hub', to: '/' },
       { text: 'Platform', to: '/platform' },
       { text: 'Documentation', to: 'https://docs.asyncy.com'},
-      { text: 'Submit a service', to: '/', button: true },
-    ]"/></div>`
+    ]"><template slot="afterLinks"><a-button>Submit a Service</a-button></template></app-header></div>`
   }))
 
 storiesOf('Asyncy Components/Footer', module)
