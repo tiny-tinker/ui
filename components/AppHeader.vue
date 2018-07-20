@@ -66,8 +66,12 @@
                 <component :is="linkComponent" :to="item.to">{{item.text}}</component>
               </span>
             </li>
-            <li>
-              <slot name="after-links"></slot>
+          </div>
+          <div>
+            <li :style="{
+              padding: '22px',
+            }">
+              <slot name="afterLinks"></slot>
             </li>
           </div>
         </ul>
