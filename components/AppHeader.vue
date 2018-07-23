@@ -24,11 +24,11 @@
           <ul class="links">
             <li v-for="(link, index) in headerLinks" class="web-header-link" :key="index">
               <span class="link" v-if="!link.items && !link.button">
-                <component :is="linkComponent" :to="link.to" @click="link.onClick || false">{{link.text}}</component>
+                <component :is="linkComponent" :to="link.to">{{link.text}}</component>
               </span>
 
               <dropdown :items="link.items" v-if="link.items" :link-component="linkComponent">
-                <span class="dropdown-header-text" v-html="link.text" @click="link.onClick || false"/>
+                <span class="dropdown-header-text" v-html="link.text"/>
               </dropdown>
             </li>
 
@@ -67,11 +67,13 @@
               </span>
             </li>
           </div>
-          <div>
+          <div v-if="$slots.afterLinks">
             <li :style="{
               padding: '22px',
             }">
-              <slot name="afterLinks"></slot>
+              <div @click="closeMenu">
+                <slot name="afterLinks"></slot>
+              </div>
             </li>
           </div>
         </ul>
